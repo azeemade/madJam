@@ -24,13 +24,13 @@
       <div class="col-md-6 ownCorner">
         <div class="section-b">
           <router-link to="/playlist" class="btn mb-5">Browse playlists</router-link>
-          <p>created by <a href="www.twitter.com/azeemade" class="ownName">Azeem Adenuga</a></p>
+          <p>created by <a href="https://www.twitter.com/azeemade" class="ownName">Azeem Adenuga</a></p>
         </div>
       </div>
     </div>
     <div class="d-flex mb-3 foo">
-      <a href="www.instagram.com/madjamng"><span class="fab fa-instagram fa-2x" title="Instagram"></span></a>
-      <a href="www.twitter.com/madjamng"><span class="fab fa-twitter fa-2x" title="Twitter"></span></a>
+      <a href="https://www.instagram.com/madjamng"><span class="fab fa-instagram fa-2x" title="Instagram"></span></a>
+      <a href="https://www.twitter.com/madjamng"><span class="fab fa-twitter fa-2x" title="Twitter"></span></a>
       <span class="fas fa-plus-circle fa-2x a" title="Contribute" data-toggle="modal" data-target="#ctb"></span>
       <span class="fas fa-envelope fa-2x a" title="Subscribe" data-toggle="modal" data-target="#sub"></span>
     </div>
