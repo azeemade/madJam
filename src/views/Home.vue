@@ -24,17 +24,17 @@
       <div class="col-md-6 ownCorner">
         <div class="section-b">
           <router-link to="/playlist" class="btn mb-5">Browse playlists</router-link>
-          <p>created by <a href="" class="ownName">Azeem Adenuga</a></p>
+          <p>created by <a href="www.twitter.com/azeemade" class="ownName">Azeem Adenuga</a></p>
         </div>
       </div>
     </div>
     <div class="d-flex mb-3 foo">
-      <span class="fab fa-instagram fa-2x" title="Instagram"></span>
-      <span class="fab fa-twitter fa-2x" title="Twitter"></span>
-      <span class="fas fa-plus-circle fa-2x" title="Contribute"></span>
-      <span class="fas fa-envelope fa-2x" title="Subscribe"></span>
+      <a href="www.instagram.com/madjamng"><span class="fab fa-instagram fa-2x" title="Instagram"></span></a>
+      <a href="www.twitter.com/madjamng"><span class="fab fa-twitter fa-2x" title="Twitter"></span></a>
+      <span class="fas fa-plus-circle fa-2x a" title="Contribute" data-toggle="modal" data-target="#ctb"></span>
+      <span class="fas fa-envelope fa-2x a" title="Subscribe" data-toggle="modal" data-target="#sub"></span>
     </div>
-      <p>© 2020 konsole All rights reserved.</p>
+    <p>© 2020 konsole All rights reserved.</p>
   </div>
 </template>
 <style scoped>
@@ -49,7 +49,7 @@
   .btn{
     background-color: #FFDB00;
     border-radius: 4px;
-    width: 100%;
+    width: 100%; 
   }
   .section-b{
     position: fixed;
@@ -64,11 +64,14 @@
     text-decoration: underline;
   }
   .fa-2x{
-        border: 1px solid #FFDB00;
-        margin-right: 7px;
-        color: #FFDB00;
-        padding: 6px;
-    }
+    border: 1px solid #FFDB00;
+    margin-right: 7px;
+    color: #FFDB00;
+    padding: 6px;
+  }
+  .a:not(:disabled):not(.disabled){
+    cursor: pointer;
+  }
 @media (max-width: 576px) { 
     .section-b{
         position: relative;
