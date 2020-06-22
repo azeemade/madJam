@@ -51,38 +51,33 @@ export default {
           playlists:[
               {
                   title: 'Naija club bangers',
-                  img: 'undraw_partying_p92d',
-                  imgalt: 'Azier Studios',
                   id: 'ncb',
                   pid: 'ncg'
               },
               {
                   title: 'Storytelling rap',
-                  img: 'undraw_imagination_ok71',
-                  imgalt: 'Azier Studios',
                   id: 'str',
                   pid: 'stp'
               },
               {
                   title: 'EDM playlist',
-                  img: '../assets/imgs/undraw_mello_otq1.png',
-                  imgalt: 'Azier Studios',
                   id: 'edm',
                   pid: 'dmp'
               },
               {
                   title: 'Summer 16',
-                  img: '../../../public/images/undraw_sunlight_tn7t.png',
-                  imgalt: 'Azier Studios',
                   id: 's16',
                   pid: 'u16'
               },
               {
                   title: 'Money playlist',
-                  img: '../../../public/images/undraw_wallet_aym5.png',
-                  imgalt: 'Azier Studios',
                   id: 'tmp',
                   pid: 'mpl'
+              },
+              {
+                  title: 'Rap Duo',
+                  id: 'rdu',
+                  pid: 'rdo'
               },
           ],
         mlists:[
@@ -110,6 +105,11 @@ export default {
             title: 'Money playlist',
             src: 'https://embed.music.apple.com/ng/playlist/money-playlist/pl.u-qxylK2xT3lZLkKz?app=music',
             id: 'tmp',
+          },
+          {
+            title: 'Rap duo',
+            src: 'https://embed.music.apple.com/ng/playlist/rap-duo/pl.u-55D6XWVi6xqzR49?app=music',
+            id: 'rdu',
           },
         ]
       }
@@ -146,6 +146,9 @@ export default {
   #mpl{
     background-image: url('../assets/imgs/undraw_wallet_aym5.png');
   }  
+  #rdo{
+    background-image: url('../assets/imgs/undraw_conversation_h12g.png');
+  }
   .search{
     float: right;
   }
