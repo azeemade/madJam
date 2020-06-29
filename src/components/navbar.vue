@@ -60,9 +60,11 @@
                         </div>
                             <p>Subscribe to our newsleter to get the latest action in the madJam community.</p>
                         <div class="mb-5">
-                            <form name="subscribe" method="post" data-netlify="true">                                       
+                            <form name="subscribe" method="post" data-netlify="true" 
+                            data-netlify-honeypot="bot-field" @submit.prevent="handleSubmit">  
+                                <input type="hidden" name="form-name" value="subscribe" />                                     
                                 <div class="form-group">
-                                    <input type="text" placeholder="Email" class="form-control"  required>
+                                    <input type="text" placeholder="Email" class="form-control" required v-model="email">
                                 </div>                         
                                 <button type="submit" class="btn sbtn">Submit</button>
                             </form>
@@ -122,6 +124,7 @@
     }
 </style>
 <script>
+import axios from "axios";
 export default {
     data(){
         return{
@@ -142,7 +145,8 @@ export default {
                     name: 'Subscribe',
                     id: 'sub'
                 }
-            ]
+            ],
+            email: "",
         }
     },
     created(){
@@ -161,6 +165,31 @@ export default {
                 document.getElementById("header").style.display = "block";
             }
         },
-    }
+        encode (data) {
+            return Object.keys(data)
+                .map(
+                key => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`
+                )
+                .join("&");
+        },
+        handleSubmit () {
+            const axiosConfig = {
+                header: { "Content-Type": "application/x-www-form-urlencoded" }
+            };
+            axios.post("/",
+                this.encode({
+                "form-name": "subscribe",
+                ...this.form
+                }),
+                axiosConfig
+            )
+            .then(() => {
+                this.$router.push('thanks')
+            })
+            .catch(() => {
+                this.$router.push('404')
+            })
+        }
+    } 
 }
 </script>

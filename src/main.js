@@ -10,6 +10,8 @@ import "@mdi/font/css/materialdesignicons.css";
 
 Vue.config.productionTip = false;
 Vue.component("navbar", require("./components/navbar.vue").default);
+Vue.component("formFail", require("./components/formFail.vue").default);
+Vue.component("formSuccess", require("./components/formSuccess.vue").default);
 
 new Vue({
   router,
