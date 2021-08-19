@@ -1,0 +1,77 @@
+[
+  {
+    "name": "categories",
+    "path": "/categories",
+    "component": "C:\\\\Users\\\\A. Azeem\\\\Documents\\\\Projects\\\\madJam\\\\pages\\\\categories.vue",
+    "chunkName": "pages/categories",
+    "children": [
+      {
+        "name": "categories-slug",
+        "path": ":slug?",
+        "component": "C:\\\\Users\\\\A. Azeem\\\\Documents\\\\Projects\\\\madJam\\\\pages\\\\categories\\\\_slug.vue",
+        "chunkName": "pages/categories/_slug",
+        "_name": "_5d91dbde"
+      }
+    ],
+    "_name": "_d312f048"
+  },
+  {
+    "name": "home",
+    "path": "/home",
+    "component": "C:\\\\Users\\\\A. Azeem\\\\Documents\\\\Projects\\\\madJam\\\\pages\\\\home.vue",
+    "chunkName": "pages/home",
+    "_name": "_ba77c9c2"
+  },
+  {
+    "name": "playlists",
+    "path": "/playlists",
+    "component": "C:\\\\Users\\\\A. Azeem\\\\Documents\\\\Projects\\\\madJam\\\\pages\\\\playlists.vue",
+    "chunkName": "pages/playlists",
+    "children": [
+      {
+        "name": "playlists-slug",
+        "path": ":slug?",
+        "component": "C:\\\\Users\\\\A. Azeem\\\\Documents\\\\Projects\\\\madJam\\\\pages\\\\playlists\\\\_slug.vue",
+        "chunkName": "pages/playlists/_slug",
+        "_name": "_11698549"
+      }
+    ],
+    "_name": "_e0445e5e"
+  },
+  {
+    "path": "/search",
+    "component": "C:\\\\Users\\\\A. Azeem\\\\Documents\\\\Projects\\\\madJam\\\\pages\\\\search.vue",
+    "chunkName": "pages/search",
+    "children": [
+      {
+        "name": "search",
+        "path": "",
+        "component": "C:\\\\Users\\\\A. Azeem\\\\Documents\\\\Projects\\\\madJam\\\\pages\\\\search\\\\index.vue",
+        "chunkName": "pages/search/index",
+        "_name": "_1b6f1a1a"
+      },
+      {
+        "name": "search-category",
+        "path": "category",
+        "component": "C:\\\\Users\\\\A. Azeem\\\\Documents\\\\Projects\\\\madJam\\\\pages\\\\search\\\\category.vue",
+        "chunkName": "pages/search/category",
+        "_name": "_e2a52a34"
+      },
+      {
+        "name": "search-playlist",
+        "path": "playlist",
+        "component": "C:\\\\Users\\\\A. Azeem\\\\Documents\\\\Projects\\\\madJam\\\\pages\\\\search\\\\playlist.vue",
+        "chunkName": "pages/search/playlist",
+        "_name": "_d04ab48c"
+      }
+    ],
+    "_name": "_3d585530"
+  },
+  {
+    "name": "index",
+    "path": "/",
+    "component": "C:\\\\Users\\\\A. Azeem\\\\Documents\\\\Projects\\\\madJam\\\\pages\\\\index.vue",
+    "chunkName": "pages/index",
+    "_name": "_09fc8c42"
+  }
+]
