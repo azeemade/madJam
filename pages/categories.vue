@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div v-if="$device.isMobile">
+        <div class="mobile">
             <div class="px-3">
                 <backbutton />
 
@@ -34,7 +34,7 @@
             </div>
         </div>
 
-        <div v-else>
+        <div class="desktop">
         </div>
     </div>
 </template>
@@ -45,6 +45,7 @@ import Searchbar from '../components/utils/searchbar.vue'
 export default {
   components: { Backbutton, Searchbar, Categorycardcol },
   name: "categories",
-  layout: (ctx) => ctx.$device.isMobile ? 'default' : 'desktop'
+  //layout: (ctx) => ctx.$device.isMobile ? 'default' : 'desktop'
+  layout: window.matchMedia("(min-width: 768px)".matches) ? 'desktop' : 'default',
 }
 </script>

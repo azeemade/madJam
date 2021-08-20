@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div v-if="$device.isMobile">
+        <div class="mobile">
             <div class="px-3">
                 <backbutton />
 
@@ -34,25 +34,31 @@
             </div>
         </div>
 
-        <div v-else>
+        <div class="desktop">
         </div>
     </div>
 </template>
 <script>
 import dummy from '~/static/db.json'
+//import media from '~/static/js/media.js'
 import Playlistcardcol from '../components/mobile/playlistcardcol.vue'
 import Backbutton from '../components/utils/backbutton.vue'
 import Searchbar from '../components/utils/searchbar.vue'
 export default {
-  components: { Backbutton, Searchbar, Playlistcardcol },
-  name: "playlists",
-  layout: (ctx) => ctx.$device.isMobile ? 'default' : 'desktop',
-  data(){
+    components: { Backbutton, Searchbar, Playlistcardcol },
+    name: "playlists",
+    layout: (ctx) => ctx.$device.isMobile ? 'default' : 'desktop',
+    data(){
         return{
             playlist: dummy,
             slug: this.$route.params
         }
     },
-    transition: 'playlists/name_2'
+    computed: {
+        xjugy(){
+            axios.get('https://raw.githubusercontent.com/azeemade/madJam/patch-v2/static/db.json')
+            .then((res) => res.json())
+        }
+    }
 }
 </script>

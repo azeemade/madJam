@@ -23,25 +23,30 @@
         <div class="my-3">
             <p class="text--dark">Tags</p>
             <div class="d-flex">
-                <nuxt-link>Tag 1</nuxt-link>
-                <nuxt-link>Tag 2</nuxt-link>
+                <nuxt-link to="">Tag 1</nuxt-link>
+                <nuxt-link to="">Tag 2</nuxt-link>
             </div>
         </div>
     </div>
 </template>
 <script>
 import { mapState } from 'vuex'
+import backbutton from '../../components/utils/backbutton.vue';
 export default {
+  components: { backbutton },
     data(){
         return{
             slug: this.$route.params.slug
         }
     },
+    /*asyncData(context, dummyx2){
+        return dummyx2.playlists.find(el => el.slug === context.params.slug);
+    },*/
     computed: {
         ...mapState(["dummyx2"]),
-        playlist(){
+        /*playlist(){
             return this.dummyx2.playlists.find(el => el.slug === this.slug);
-        }
+        }*/
     }
 }
 </script>

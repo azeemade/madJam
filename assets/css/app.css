@@ -117,13 +117,28 @@ body {
   padding-left: 2.375rem;
 }
 
-.search-result:hover{
+.search-result:hover {
   background-color: #b6c9da;
 }
 
-.nuxt-link-exact-active{
+.nuxt-link-exact-active {
   background-color: #b6c9da;
 }
-.border-link{
+.border-link {
   border: 1px solid #b6c9da80;
+}
+
+.mobile {
+  display: block;
+}
+.desktop {
+  display: none;
+}
+@media only screen and (min-width: 768px) {
+  .mobile {
+    display: none;
+  }
+  .desktop {
+    display: block;
+  }
 }

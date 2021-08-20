@@ -1,7 +1,7 @@
 <template>
     <div class="row">
-        <div class="col-6 mb-4" v-for="item, index in data.playlists" :key="item.slug">
-            <NuxtLink :to="`playlists/${item.slug}`">
+        <div class="col-6 mb-4" v-for="item in data.playlists" :key="item.slug">
+            <NuxtLink :to="`/playlists/${item.slug}`">
                 <img :src="require('~/assets/images/'+item.url+'.png')" alt="" class="rounded-lg mb-3" width="136" height="112">
                 <p class="text--dark mb-1 font-semibold">{{item.title}}</p>
                 <p class="font-light text-sm text--dark">{{item.description}}</p>

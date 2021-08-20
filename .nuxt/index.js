@@ -14,6 +14,7 @@ import { createStore } from './store.js'
 /* Plugins */
 
 import nuxt_plugin_plugin_387098d9 from 'nuxt_plugin_plugin_387098d9' // Source: .\\components\\plugin.js (mode: 'all')
+import nuxt_plugin_axios_7a286b08 from 'nuxt_plugin_axios_7a286b08' // Source: .\\axios.js (mode: 'all')
 import nuxt_plugin_deviceplugin_e581b3f2 from 'nuxt_plugin_deviceplugin_e581b3f2' // Source: .\\device.plugin.js (mode: 'all')
 
 // Component: <ClientOnly>
@@ -82,7 +83,7 @@ async function createApp(ssrContext, config = {}) {
   // here we inject the router and store to all child components,
   // making them available everywhere as `this.$router` and `this.$store`.
   const app = {
-    head: {"title":"madJam | Listen to carefully curated playlists","meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"},{"hid":"description","name":"description","content":"{{escape description }}"}],"link":[{"rel":"icon","type":"image\u002Fx-icon","href":"\u002FIcon.png"},{"rel":"stylesheet","href":"https:\u002F\u002Fcdn.jsdelivr.net\u002Fnpm\u002Fbootstrap-icons@1.5.0\u002Ffont\u002Fbootstrap-icons.css"},{"href":"https:\u002F\u002Fcdn.jsdelivr.net\u002Fnpm\u002Fbootstrap@5.0.1\u002Fdist\u002Fcss\u002Fbootstrap.min.css","rel":"stylesheet","integrity":"sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x","crossorigin":"anonymous"}],"script":[{"src":"https:\u002F\u002Fcdn.jsdelivr.net\u002Fnpm\u002Fbootstrap@5.0.1\u002Fdist\u002Fjs\u002Fbootstrap.bundle.min.js","integrity":"sha384-gtEjrD\u002FSeCtmISkJkNUaaKMoLD0\u002F\u002FElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4","crossorigin":"anonymous"},{"src":"http:\u002F\u002Fajax.googleapis.com\u002Fajax\u002Flibs\u002Fjquery\u002F1.7.1\u002Fjquery.min.js","type":"text\u002Fjavascript"},{"src":"\u002Fjs\u002Fapp.js"}],"style":[]},
+    head: {"title":"madJam | Listen to carefully curated playlists","meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"},{"hid":"description","name":"description","content":"{{escape description }}"}],"link":[{"rel":"icon","type":"image\u002Fx-icon","href":"\u002FIcon.png"},{"rel":"stylesheet","href":"https:\u002F\u002Fcdn.jsdelivr.net\u002Fnpm\u002Fbootstrap-icons@1.5.0\u002Ffont\u002Fbootstrap-icons.css"},{"href":"https:\u002F\u002Fcdn.jsdelivr.net\u002Fnpm\u002Fbootstrap@5.0.1\u002Fdist\u002Fcss\u002Fbootstrap.min.css","rel":"stylesheet","integrity":"sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x","crossorigin":"anonymous"}],"script":[{"src":"https:\u002F\u002Fcdn.jsdelivr.net\u002Fnpm\u002Fbootstrap@5.0.1\u002Fdist\u002Fjs\u002Fbootstrap.bundle.min.js","integrity":"sha384-gtEjrD\u002FSeCtmISkJkNUaaKMoLD0\u002F\u002FElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4","crossorigin":"anonymous"},{"src":"https:\u002F\u002Fajax.googleapis.com\u002Fajax\u002Flibs\u002Fjquery\u002F1.7.1\u002Fjquery.min.js","type":"text\u002Fjavascript"},{"src":"\u002Fjs\u002Fapp.js"}],"style":[]},
 
     store,
     router,
@@ -213,6 +214,10 @@ async function createApp(ssrContext, config = {}) {
 
   if (typeof nuxt_plugin_plugin_387098d9 === 'function') {
     await nuxt_plugin_plugin_387098d9(app.context, inject)
+  }
+
+  if (typeof nuxt_plugin_axios_7a286b08 === 'function') {
+    await nuxt_plugin_axios_7a286b08(app.context, inject)
   }
 
   if (typeof nuxt_plugin_deviceplugin_e581b3f2 === 'function') {

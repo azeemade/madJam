@@ -1,9 +1,9 @@
 <template>
     <div>
-        <div v-if="$device.isMobile">
+        <div class="mobile">
             <m-home />
         </div>
-        <div v-else>
+        <div class="desktop">
             This is a desktop device
         </div>
     </div>
@@ -13,6 +13,7 @@ import M_home from '../components/m_home.vue'
 export default {
   components: { M_home },
   name: "home",
-  layout: (ctx) => ctx.$device.isMobile ? 'default' : 'desktop'
+  //layout: (ctx) => ctx.$device.isMobile ? 'default' : 'desktop'
+  layout: window.matchMedia("(min-width: 768px)".matches) ? 'desktop' : 'default',
 }
 </script>

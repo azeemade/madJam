@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div v-if="$device.isMobile">
+        <div class="mobile">
             <div class="input-group">
                 <Nuxt-link class="bg--grey-50 btn pt-3" id="search-addon" to="/home">
                     <i class="bi bi-chevron-left text--dark-50"></i>
@@ -24,7 +24,7 @@
             </div>
             <Nuxt-child class="px-3"></Nuxt-child>
         </div>
-        <div v-else>
+        <div class="desktop">
             This is a desktop device
         </div>
     </div>
@@ -32,7 +32,8 @@
 <script>
 export default {
     name: 'search',
-    layout: (ctx) => ctx.$device.isMobile ? 'default' : 'desktop',
+    //layout: (ctx) => ctx.$device.isMobile ? 'default' : 'desktop',
+    layout: window.matchMedia("(min-width: 768px)".matches) ? 'desktop' : 'default',
     data(){
         return{
             search_title: "Search madjam"
