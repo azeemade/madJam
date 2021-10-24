@@ -6,10 +6,13 @@ You can directly use them in pages and other components without the need to impo
 
 **Tip:** If a component is conditionally rendered with `v-if` and is big, it is better to use `Lazy` or `lazy-` prefix to lazy load.
 
+- `<DHome>` | `<d-home>` (components/d_home.vue)
 - `<Landing>` | `<landing>` (components/landing.vue)
 - `<Logo>` | `<logo>` (components/logo.vue)
 - `<MHome>` | `<m-home>` (components/m_home.vue)
+- `<DesktopHeroSection>` | `<desktop-hero-section>` (components/desktop/heroSection.vue)
 - `<DesktopNavbar>` | `<desktop-navbar>` (components/desktop/Navbar.vue)
+- `<DesktopSidebar>` | `<desktop-sidebar>` (components/desktop/sidebar.vue)
 - `<MobileLandingActionsheet>` | `<mobile-landing-actionsheet>` (components/mobile/landing_actionsheet.vue)
 - `<MobileNavbar>` | `<mobile-navbar>` (components/mobile/Navbar.vue)
 - `<MobilePlaylistcard>` | `<mobile-playlistcard>` (components/mobile/playlistcard.vue)
@@ -17,5 +20,6 @@ You can directly use them in pages and other components without the need to impo
 - `<UtilsBackbutton>` | `<utils-backbutton>` (components/utils/backbutton.vue)
 - `<UtilsCategorycard>` | `<utils-categorycard>` (components/utils/categorycard.vue)
 - `<UtilsCategorycardcol>` | `<utils-categorycardcol>` (components/utils/categorycardcol.vue)
+- `<UtilsNavbar>` | `<utils-navbar>` (components/utils/Navbar.vue)
 - `<UtilsSearchbar>` | `<utils-searchbar>` (components/utils/searchbar.vue)
 - `<UtilsSubscribemodal>` | `<utils-subscribemodal>` (components/utils/subscribemodal.vue)

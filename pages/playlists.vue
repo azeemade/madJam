@@ -48,16 +48,29 @@ export default {
     components: { Backbutton, Searchbar, Playlistcardcol },
     name: "playlists",
     layout: (ctx) => ctx.$device.isMobile ? 'default' : 'desktop',
-    data(){
+    /*data(){
         return{
             playlist: dummy,
-            slug: this.$route.params
+            slug: this.$route.params,
+            xhyft: []
         }
     },
-    computed: {
-        xjugy(){
-            axios.get('https://raw.githubusercontent.com/azeemade/madJam/patch-v2/static/db.json')
-            .then((res) => res.json())
+    mounted(){
+        this.$axios.$get('https://raw.githubusercontent.com/azeemade/madJam/patch-v2/static/db.json')
+            .then(response => this.xhyft = response.playlists.find(el => el.slug = 'name_1'))
+    }*/
+    data() {
+        return {
+            playlist: null
+        }
+    },
+    created () {
+        this.getPlaylists()
+    },
+    methods: {
+        async getPlaylists() {
+            this.$axios.$get('https://raw.githubusercontent.com/azeemade/madJam/patch-v2/static/db.json')
+            .then(response => this.playlist = response.playlists)
         }
     }
 }

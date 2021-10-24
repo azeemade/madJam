@@ -34,19 +34,32 @@ import { mapState } from 'vuex'
 import backbutton from '../../components/utils/backbutton.vue';
 export default {
   components: { backbutton },
-    data(){
+    /*data(){
         return{
             slug: this.$route.params.slug
         }
     },
-    /*asyncData(context, dummyx2){
-        return dummyx2.playlists.find(el => el.slug === context.params.slug);
-    },*/
     computed: {
         ...mapState(["dummyx2"]),
-        /*playlist(){
+        playlist(){
             return this.dummyx2.playlists.find(el => el.slug === this.slug);
-        }*/
+        }
+    }*/
+
+    data() {
+        return {
+        playlist: {}
+        }
+    },
+    created () {
+        this.getPlaylistBySlug()
+    },
+    methods: {
+        async getPlaylistBySlug () {
+        this.$axios.$get('https://raw.githubusercontent.com/azeemade/madJam/patch-v2/static/db.json')
+            .then(response => this.playlist = response.playlists.find(el => el.slug = this.$route.params.slug))
+        
+        }
     }
 }
 </script>

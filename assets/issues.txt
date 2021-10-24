@@ -1,0 +1,7 @@
+Issues
+# Subscription modal
+# Layout(The app responsiveness)
+# Dynamic pages
+# Spotify APIs
+# Search and filters
+# Mobile testing

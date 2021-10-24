@@ -5,7 +5,7 @@
         </div>
         <div class="mb-8">
             <p class="mb-0 text--primary font-light">Browse a wide range of playlist created specially for your delight.
-                Available on Apple music and Spotify. 
+                Available on Apple music, Spotify and Youtube music. 
             </p>
         </div>
         <div class="mb-7">

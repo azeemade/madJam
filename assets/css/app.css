@@ -68,7 +68,7 @@
 }
 
 body {
-  background-color: #b6c9da19;
+  background-color: white;
 }
 
 .searchbar {
@@ -140,5 +140,8 @@ body {
   }
   .desktop {
     display: block;
+  }
+  .alert--section {
+    width: 50%;
   }
 }

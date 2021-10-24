@@ -1,3 +1,9 @@
+import dummy from './static/db.json'
+/*let dynamicRoutes = () => {
+  return new Promise(resolve => {
+    resolve(dummy.playlists.map(el => `playlists/${el.slug}`))
+  })
+}*/
 module.exports = {
     /*
     ** Headers of the page
@@ -28,7 +34,12 @@ module.exports = {
     loading: { color: '#3B8070' },
 
     /*generate: {
-      routes: dynamicRoutes
+      //dynamicRoutes
+      routes(){
+        return dummy.playlists.map(el => {
+          return '/playlists/'+ el.slug
+        })
+      }
     },*/
 
     css: [

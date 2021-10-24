@@ -1,4 +1,7 @@
 {
+  "DHome": {
+    "description": "Auto imported from components/d_home.vue"
+  },
   "Landing": {
     "description": "Auto imported from components/landing.vue"
   },
@@ -8,8 +11,14 @@
   "MHome": {
     "description": "Auto imported from components/m_home.vue"
   },
+  "DesktopHeroSection": {
+    "description": "Auto imported from components/desktop/heroSection.vue"
+  },
   "DesktopNavbar": {
     "description": "Auto imported from components/desktop/Navbar.vue"
+  },
+  "DesktopSidebar": {
+    "description": "Auto imported from components/desktop/sidebar.vue"
   },
   "MobileLandingActionsheet": {
     "description": "Auto imported from components/mobile/landing_actionsheet.vue"
@@ -31,6 +40,9 @@
   },
   "UtilsCategorycardcol": {
     "description": "Auto imported from components/utils/categorycardcol.vue"
+  },
+  "UtilsNavbar": {
+    "description": "Auto imported from components/utils/Navbar.vue"
   },
   "UtilsSearchbar": {
     "description": "Auto imported from components/utils/searchbar.vue"
