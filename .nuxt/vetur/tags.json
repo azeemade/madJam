@@ -1,6 +1,15 @@
 {
+  "DBrowse": {
+    "description": "Auto imported from components/d_browse.vue"
+  },
+  "DGift": {
+    "description": "Auto imported from components/d_gift.vue"
+  },
   "DHome": {
     "description": "Auto imported from components/d_home.vue"
+  },
+  "ImageUpload": {
+    "description": "Auto imported from components/image-upload.vue"
   },
   "Landing": {
     "description": "Auto imported from components/landing.vue"
@@ -8,8 +17,17 @@
   "Logo": {
     "description": "Auto imported from components/logo.vue"
   },
+  "MBrowse": {
+    "description": "Auto imported from components/m_browse.vue"
+  },
+  "MGift": {
+    "description": "Auto imported from components/m_gift.vue"
+  },
   "MHome": {
     "description": "Auto imported from components/m_home.vue"
+  },
+  "DesktopContribute": {
+    "description": "Auto imported from components/desktop/contribute.vue"
   },
   "DesktopHeroSection": {
     "description": "Auto imported from components/desktop/heroSection.vue"
@@ -19,6 +37,9 @@
   },
   "DesktopSidebar": {
     "description": "Auto imported from components/desktop/sidebar.vue"
+  },
+  "DesktopSubscribe": {
+    "description": "Auto imported from components/desktop/subscribe.vue"
   },
   "MobileLandingActionsheet": {
     "description": "Auto imported from components/mobile/landing_actionsheet.vue"
@@ -31,6 +52,9 @@
   },
   "MobilePlaylistcardcol": {
     "description": "Auto imported from components/mobile/playlistcardcol.vue"
+  },
+  "MobileSidebar": {
+    "description": "Auto imported from components/mobile/sidebar.vue"
   },
   "UtilsBackbutton": {
     "description": "Auto imported from components/utils/backbutton.vue"

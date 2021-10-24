@@ -5,7 +5,7 @@
         </div>
         <div class="mb-5">   
             <div class="mobile">
-                <navbar />
+                <mobileNavbar />
             </div>
             <div class="desktop">
                 <DesktopNavbar />
@@ -16,10 +16,10 @@
 <script>
 import DesktopNavbar from '../desktop/Navbar.vue'
 import Sidebar from '../desktop/sidebar.vue'
-import Navbar from '../mobile/Navbar.vue'
+import mobileNavbar from '../mobile/Navbar.vue'
 export default {
     name: 'navbar',
-  components: { Navbar, DesktopNavbar, Sidebar },
+  components: { mobileNavbar, DesktopNavbar, Sidebar },
     
 }
 </script>

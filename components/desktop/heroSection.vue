@@ -1,12 +1,12 @@
 <template>
-    <div class="container-md pt-5">
+    <div class="container pt-24">
         <div class="row">
             <div class="col-md-8">
                 <div class="mb-3">
                     <p class="mb-0 text-7xl text--dark">Listen to carefully curated playlists</p>
                 </div>
                 <div class="mb-8">
-                    <p class="mb-0 text--dark font-light">Browse a wide range of playlist created specially for your delight.
+                    <p class="mb-0 text--dark">Browse a wide range of playlist created specially for your delight.
                         Available on Apple music, Spotify and Youtube music. 
                     </p>
                 </div>

@@ -1,13 +1,15 @@
 <template>
     <div>
-        <div class="mobile">
+        <div v-if="$device.isMobile">
             <div class="d-flex justify-content-center py-16">
                 <img src="~/assets/images/undraw_happy_music.png" alt="happy music" width="240" height="209">
             </div>
             <actionsheet />
         </div>
-        <div class="desktop">
-            <heroSection />
+        <div v-else>
+            <div class="px-5">
+                <heroSection />
+            </div>
         </div>
     </div>
 </template>

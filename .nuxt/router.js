@@ -4,8 +4,10 @@ import { normalizeURL, decode } from 'ufo'
 import { interopDefault } from './utils'
 import scrollBehavior from './router.scrollBehavior.js'
 
+const _01dfd54a = () => interopDefault(import('..\\pages\\browse.vue' /* webpackChunkName: "pages/browse" */))
 const _d312f048 = () => interopDefault(import('..\\pages\\categories.vue' /* webpackChunkName: "pages/categories" */))
 const _5d91dbde = () => interopDefault(import('..\\pages\\categories\\_slug.vue' /* webpackChunkName: "pages/categories/_slug" */))
+const _1b420220 = () => interopDefault(import('..\\pages\\gift.vue' /* webpackChunkName: "pages/gift" */))
 const _ba77c9c2 = () => interopDefault(import('..\\pages\\home.vue' /* webpackChunkName: "pages/home" */))
 const _e0445e5e = () => interopDefault(import('..\\pages\\playlists.vue' /* webpackChunkName: "pages/playlists" */))
 const _11698549 = () => interopDefault(import('..\\pages\\playlists\\_slug.vue' /* webpackChunkName: "pages/playlists/_slug" */))
@@ -27,6 +29,10 @@ export const routerOptions = {
   scrollBehavior,
 
   routes: [{
+    path: "/browse",
+    component: _01dfd54a,
+    name: "browse"
+  }, {
     path: "/categories",
     component: _d312f048,
     name: "categories",
@@ -35,6 +41,10 @@ export const routerOptions = {
       component: _5d91dbde,
       name: "categories-slug"
     }]
+  }, {
+    path: "/gift",
+    component: _1b420220,
+    name: "gift"
   }, {
     path: "/home",
     component: _ba77c9c2,

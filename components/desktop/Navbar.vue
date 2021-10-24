@@ -1,15 +1,15 @@
 <template>
-    <nav class="fixed-top">
+    <nav class="fixed-top bg--light">
         <div v-if="$route.name === 'index'">
             <div class="container">
-                <p class="text--dark fs-4 font-bold">madJam</p>
+                <p class="text--dark fs-3 font-bold py-1">madJam</p>
             </div>
         </div>
         <div v-else>
-            <div class="container">
+            <div class="ml-56 my-3">
                 <div class="d-flex justify-between">
-                    <searchbar />
-                    <div>
+                    <searchbar :width="'w-50 ml-32'"/>
+                    <div class="d-flex align-items-center mr-5">
                         <div class="mr-2">
                             <div v-if="$store.state.username == ''">
                                 <img src="~/assets/images/avatar.png" alt="avatar" width="36" height="36">

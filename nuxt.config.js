@@ -68,13 +68,12 @@ module.exports = {
       }*/
     },
     buildModules:[
-        '@nuxtjs/device',
         '@nuxtjs/tailwindcss',
+        '@nuxtjs/device'
     ],
 
     modules:[
       '@nuxtjs/axios',
-      '@nuxtjs/device'
     ]
   }
   

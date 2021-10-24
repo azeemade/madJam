@@ -11,5 +11,6 @@ import Navbar from '../components/utils/Navbar.vue'
 export default {
   components: { Landing, Navbar },
   name: "index",
+  layout: (ctx) => ctx.$device.isMobile ? 'mobile' : 'default'
 }
 </script>

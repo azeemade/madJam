@@ -1,18 +1,21 @@
 <template>
     <div>
-        <navbar />
-        <div class="mobile">
+        <div v-if="$device.isMobile">
             <m-home />
         </div>
-        <div class="desktop">
-            This is a desktop device
+        <div v-else>
+            <div class="mt-24 mr-5">
+                <d-home />
+            </div>
         </div>
     </div>
 </template>
 <script>
+import D_home from '../components/d_home.vue'
 import M_home from '../components/m_home.vue'
 export default {
-  components: { M_home },
+  components: { M_home, D_home},
   name: "home",
+  layout: (ctx) => ctx.$device.isMobile ? 'mobile' : 'default'
 }
 </script>

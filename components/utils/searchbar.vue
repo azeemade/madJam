@@ -1,5 +1,5 @@
 <template>
-    <div class="input-group has-icon">
+    <div class="input-group has-icon" :class="width">
         <span class="form-control-feedback">
             <i class="bi bi-search text--dark-50"></i>
         </span>
@@ -16,6 +16,10 @@ export default {
     name: 'searchbar',
     props:{
         channel: {
+            type: String,
+            default: ''
+        },
+        width: {
             type: String,
             default: ''
         },

@@ -1,17 +1,17 @@
 .bg--dark {
-  background-color: #3f3d56;
+  background-color: #2f2e41;
 }
 
 .text--dark {
-  color: #3f3d56;
+  color: #2f2e41;
 }
 
 .bg--dark-50 {
-  background-color: #3f3d5680;
+  background-color: #2f2e4180;
 }
 
 .text--dark-50 {
-  color: #3f3d5680;
+  color: #2f2e4180;
 }
 
 .bg--primary {
@@ -37,34 +37,36 @@
 }
 
 .bg--grey {
-  background-color: #e6e6e6;
+  background-color: #c4c4c4;
 }
 
 .text--grey {
-  color: #e6e6e6;
+  color: #c4c4c4;
 }
 
 .bg--grey-50 {
-  background-color: #e6e6e680;
+  background-color: #c4c4c480;
 }
 
 .text--grey-50 {
-  color: #e6e6e680;
+  color: #c4c4c480;
 }
 
 .action-sheet {
   border-radius: 16px 16px 0px 0px;
-  background-color: #3f3d56;
+  background-color: #f8fafb;
+}
+
+.z--index {
+  z-index: 1099;
 }
 
 .name-input {
-  background-color: transparent;
   border: 1px solid #b6c9da;
-  color: #b6c9da;
 }
 
 .name-input::placeholder {
-  color: #e6e6e6;
+  color: #c4c4c4;
 }
 
 body {
@@ -75,7 +77,7 @@ body {
   background-color: #e6e6e680;
 }
 .searchbar::placeholder {
-  color: #3f3d5680;
+  color: #2f2e4180;
 }
 
 .overflow-cards {
@@ -120,12 +122,20 @@ body {
 .search-result:hover {
   background-color: #b6c9da;
 }
-
-.nuxt-link-exact-active {
-  background-color: #b6c9da;
-}
 .border-link {
   border: 1px solid #b6c9da80;
+}
+
+.category-card {
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f8fafb;
+  border-radius: 8px;
+  color: #2f2e41;
+  display: flex;
+}
+.category-card:hover {
+  background-color: #a0b5c980;
 }
 
 .mobile {
@@ -143,5 +153,9 @@ body {
   }
   .alert--section {
     width: 50%;
+  }
+  .px--5 {
+    padding-left: 1.25rem /* 20px */;
+    padding-right: 1.25rem /* 20px */;
   }
 }
