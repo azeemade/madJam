@@ -9,7 +9,6 @@
             <img src="../../assets/images/madjam.png" alt="madJam logo" width="32" height="22">
         </div>
         <div></div>
-        
     </nav>
 </template>
 <script>

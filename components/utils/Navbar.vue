@@ -1,13 +1,13 @@
 <template>
     <div>
-        <div class="desktop" v-show="$route.name !== 'index'">
+        <div v-if="$device.isDesktop" v-show="$route.name !== 'index'">
             <sidebar />
         </div>
         <div class="mb-5">   
-            <div class="mobile">
+            <div v-if="$device.isMobile">
                 <mobileNavbar />
             </div>
-            <div class="desktop">
+            <div v-else>
                 <DesktopNavbar />
             </div>
         </div>
