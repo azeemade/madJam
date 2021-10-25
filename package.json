@@ -11,6 +11,7 @@
 		"moment": "^2.29.1",
 		"nuxt": "^2.15.6",
 		"tailwindcss": "^2.2.4",
+		"@nuxtjs/device": "^2.1.0",
 		"vuex": "^3.6.2"
 	},
 	"devDependencies": {
