@@ -59,7 +59,7 @@ import mobilesidebar from '../components/mobile/sidebar.vue'
 export default {
     name: 'mhome',
     components: { mobilesidebar, mobileNavbar, playlistcard, categorycard, Subscribemodal },
-    layout: 'mobile'
+    //layout: 'mobile'
     
 
 }

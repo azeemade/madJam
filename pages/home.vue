@@ -1,9 +1,9 @@
 <template>
     <div>
-        <div v-if="$device.isMobile">
+        <div class="mobile">
             <m-home />
         </div>
-        <div v-else>
+        <div class="desktop">
             <div class="mt-24 mr-5">
                 <d-home />
             </div>

@@ -1,9 +1,9 @@
 <template>
     <div>
-        <div v-if="$device.isMobile">
+        <div class="mobile">
             <Nuxt />
         </div>
-        <div v-else>
+        <div class="desktop">
             <div class="d-flex">
                 <div :class="'col-md-2'+($route.name === 'index') ? 'd-none':''">
                     <sidebar />
