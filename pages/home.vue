@@ -16,6 +16,6 @@ import M_home from '../components/m_home.vue'
 export default {
   components: { M_home, D_home},
   name: "home",
-  layout: (ctx) => ctx.$device.isMobile ? 'mobile' : 'default'
+  //layout: (ctx) => ctx.$device.isMobile ? 'mobile' : 'default'
 }
 </script>

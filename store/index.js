@@ -11,7 +11,12 @@ export const state = () => ({
 export const mutations = {
     add_username(state, username) {
         state.username= username
-        window.localStorage.setItem('username', username)
+        
+
+        this.commit('save_username');
+    },
+    save_username(state){
+        window.localStorage.setItem('username', state.username)
     },
     SET_MASTER_IMAGE(state, files){
         state.master_image = files
@@ -20,8 +25,6 @@ export const mutations = {
 
 export const getters = {
     username: state=> {
-        //return state.username;
-        let username = localStorage.getItem('username');
-        return username
+        return state.username;
     },
 }
