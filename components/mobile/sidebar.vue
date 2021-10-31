@@ -28,19 +28,19 @@
                                 <i class="bi bi-house mr-5"></i>
                                 Home
                             </nuxt-link>
-                            <nuxt-link to="/browse" class="p-2 rounded-md">
+                            <nuxt-link to="/browse" class="p-2 rounded-md" data-bs-dismiss="modal">
                                 <i class="bi bi-grid mr-5"></i>
                                 Browse
                             </nuxt-link>
-                            <nuxt-link to="/subscribe" class="p-2 rounded-md">
+                            <nuxt-link to="/subscribe" class="p-2 rounded-md" data-bs-dismiss="modal">
                                 <i class="bi bi-envelope mr-5"></i>
                                 Subscribe
                             </nuxt-link>
-                            <nuxt-link to="/contribute" class="p-2 rounded-md">
+                            <nuxt-link to="/contribute" class="p-2 rounded-md" data-bs-dismiss="modal">
                                 <i class="bi bi-inbox mr-5"></i>
                                 Contribute
                             </nuxt-link>
-                            <nuxt-link to="/gift" class="p-2 rounded-md">
+                            <nuxt-link to="/gift" class="p-2 rounded-md" data-dismiss="modal">
                                 <i class="bi bi-gift mr-5"></i>
                                 Gift playlist
                             </nuxt-link>

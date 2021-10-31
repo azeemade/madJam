@@ -2,11 +2,14 @@
     <div>
         <div class="mobile">
             <div class="px-3">
-                <backbutton />
+                <div class="d-flex align-baseline">
+                    <backbutton />
 
-                <div class="mt-3 mb-4">
-                    <p class="font-semibold fs-5 text--dark">Categories</p>
+                    <div class="mt-3 mb-4">
+                        <p class="font-semibold fs-3 text--dark">Categories</p>
+                    </div>
                 </div>
+                
                 <div class="d-flex mb-5">
                     <searchbar channel="category" />
                     
@@ -15,7 +18,7 @@
                         data-bs-toggle="dropdown" aria-expanded="false">
                             <i class="bi bi-funnel"></i>
                         </button>
-                        <ul class="dropdown-menu rounded shadow bg--grey border-0" aria-labelledby="dropdownMenu">
+                        <ul class="dropdown-menu rounded shadow bg--light border-0" aria-labelledby="dropdownMenu">
                             <li>
                                 <a class="btn text--dark">
                                     Title
@@ -46,6 +49,6 @@ export default {
   components: { Backbutton, Searchbar, Categorycardcol },
   name: "categories",
   //layout: (ctx) => ctx.$device.isMobile ? 'default' : 'desktop'
-  layout: window.matchMedia("(min-width: 768px)".matches) ? 'desktop' : 'default',
+  //layout: window.matchMedia("(min-width: 768px)".matches) ? 'desktop' : 'default',
 }
 </script>

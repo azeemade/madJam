@@ -23,6 +23,9 @@
   "MGift": {
     "description": "Auto imported from components/m_gift.vue"
   },
+  "MGift2": {
+    "description": "Auto imported from components/m_gift_2.vue"
+  },
   "MHome": {
     "description": "Auto imported from components/m_home.vue"
   },

@@ -10,6 +10,7 @@ const components = {
   Logo: () => import('../..\\components\\logo.vue' /* webpackChunkName: "components/logo" */).then(c => wrapFunctional(c.default || c)),
   MBrowse: () => import('../..\\components\\m_browse.vue' /* webpackChunkName: "components/m-browse" */).then(c => wrapFunctional(c.default || c)),
   MGift: () => import('../..\\components\\m_gift.vue' /* webpackChunkName: "components/m-gift" */).then(c => wrapFunctional(c.default || c)),
+  MGift2: () => import('../..\\components\\m_gift_2.vue' /* webpackChunkName: "components/m-gift2" */).then(c => wrapFunctional(c.default || c)),
   MHome: () => import('../..\\components\\m_home.vue' /* webpackChunkName: "components/m-home" */).then(c => wrapFunctional(c.default || c)),
   DesktopContribute: () => import('../..\\components\\desktop\\contribute.vue' /* webpackChunkName: "components/desktop-contribute" */).then(c => wrapFunctional(c.default || c)),
   DesktopHeroSection: () => import('../..\\components\\desktop\\heroSection.vue' /* webpackChunkName: "components/desktop-hero-section" */).then(c => wrapFunctional(c.default || c)),

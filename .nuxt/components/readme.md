@@ -14,6 +14,7 @@ You can directly use them in pages and other components without the need to impo
 - `<Logo>` | `<logo>` (components/logo.vue)
 - `<MBrowse>` | `<m-browse>` (components/m_browse.vue)
 - `<MGift>` | `<m-gift>` (components/m_gift.vue)
+- `<MGift2>` | `<m-gift2>` (components/m_gift_2.vue)
 - `<MHome>` | `<m-home>` (components/m_home.vue)
 - `<DesktopContribute>` | `<desktop-contribute>` (components/desktop/contribute.vue)
 - `<DesktopHeroSection>` | `<desktop-hero-section>` (components/desktop/heroSection.vue)

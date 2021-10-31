@@ -2,10 +2,11 @@
     <div>
         <div class="mobile">
             <div class="px-3">
+                
                 <backbutton />
 
                 <div class="mt-3 mb-4">
-                    <p class="font-semibold fs-5 text--dark">Playlists</p>
+                    <p class="font-semibold fs-3 text--dark">Playlists</p>
                 </div>
                 <div class="d-flex mb-5">
                     <searchbar  channel="playlist" />
@@ -61,10 +62,10 @@ export default {
     }*/
     data() {
         return {
-            playlist: null
+            playlist: dummy
         }
     },
-    created () {
+    /*created () {
         this.getPlaylists()
     },
     methods: {
@@ -72,6 +73,6 @@ export default {
             this.$axios.$get('https://raw.githubusercontent.com/azeemade/madJam/patch-v2/static/db.json')
             .then(response => this.playlist = response.playlists)
         }
-    }
+    }*/
 }
 </script>
