@@ -1,0 +1,23 @@
+{
+  "name": "madjam",
+  "version": "0.0.0",
+  "scripts": {
+    "serve": "vite preview",
+    "build": "vite build",
+    "dev": "vite"
+  },
+  "dependencies": {
+    "vue": "^3.2.16",
+    "vue-loading-overlay": "^4.0.4",
+    "vue-router": "^4.0.0-0",
+    "vuex": "^4.0.2"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^1.9.3",
+    "@vue/cli-plugin-router": "~4.5.0",
+    "autoprefixer": "^10.4.0",
+    "postcss": "^8.3.11",
+    "tailwindcss": "^2.2.19",
+    "vite": "^2.6.4"
+  }
+}
