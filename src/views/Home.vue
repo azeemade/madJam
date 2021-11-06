@@ -1,18 +1,24 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+    <div>
+        <div class="mobile">
+            <MobileHome />
+        </div>
+        <div class="desktop">
+            <div class="mt-24 mr-5">
+                <WebHome />
+            </div>
+        </div>
+    </div>
 </template>
-
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
-
+import controller from '@/assets/js/controller.js'
+import WebHome from '@/components/web/WebHome.vue'
+import MobileHome from '@/components/mobile/MobileHome.vue'
+console.log(controller.ForYou())
 export default {
-  name: 'Home',
-  components: {
-    HelloWorld
-  }
+    components: { MobileHome, WebHome},
+    name: "Home",
+    
+
 }
 </script>

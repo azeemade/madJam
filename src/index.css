@@ -1,3 +1,168 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+router-link {
+  all: unset;
+}
+.bg--dark {
+  background-color: #2f2e41;
+}
+
+.text--dark {
+  color: #2f2e41;
+}
+
+.bg--dark-50 {
+  background-color: #2f2e4180;
+}
+
+.text--dark-50 {
+  color: #2f2e4180;
+}
+
+.bg--primary {
+  background-color: #b6c9da;
+}
+.text--primary {
+  color: #b6c9da;
+}
+
+.bg--primary-50 {
+  background-color: #b6c9da80;
+}
+.text--primary-50 {
+  color: #a0b5c980;
+}
+
+.bg--light {
+  background-color: #f8fafb;
+}
+
+.text--light {
+  color: #f8fafb;
+}
+
+.bg--grey {
+  background-color: #c4c4c4;
+}
+
+.text--grey {
+  color: #c4c4c4;
+}
+
+.bg--grey-50 {
+  background-color: #c4c4c480;
+}
+
+.text--grey-50 {
+  color: #c4c4c480;
+}
+
+.action-sheet {
+  border-radius: 16px 16px 0px 0px;
+  background-color: #f8fafb;
+}
+
+.z--index {
+  z-index: 1099;
+}
+
+.name-input {
+  border: 1px solid #b6c9da;
+}
+
+.name-input::placeholder {
+  color: #c4c4c4;
+}
+
+body {
+  background-color: white;
+}
+
+.searchbar {
+  background-color: #e6e6e680;
+}
+.searchbar::placeholder {
+  color: #2f2e4180;
+}
+
+.overflow-cards {
+  display: flex;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  scrollbar-width: none;
+}
+.overflow-cards::-webkit-scrollbar {
+  display: none;
+}
+
+.playlist-card-sm {
+  min-width: 136px;
+  min-height: 184px;
+}
+
+.alert--section {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+}
+
+.modal-btn:hover {
+  color: grey;
+}
+
+.has-icon .form-control-feedback {
+  position: absolute;
+  z-index: 2;
+  display: block;
+  width: 2.375rem;
+  height: 2.375rem;
+  line-height: 2.375rem;
+  text-align: center;
+  pointer-events: none;
+}
+.has-icon .form-control {
+  padding-left: 2.375rem;
+}
+
+.search-result:hover {
+  background-color: #b6c9da;
+}
+.border-link {
+  border: 1px solid #b6c9da80;
+}
+
+.category-card {
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f8fafb;
+  border-radius: 8px;
+  color: #2f2e41;
+  display: flex;
+}
+.category-card:hover {
+  background-color: #a0b5c980;
+}
+
+.mobile {
+  display: block;
+}
+.desktop {
+  display: none;
+}
+@media only screen and (min-width: 768px) {
+  .mobile {
+    display: none;
+  }
+  .desktop {
+    display: block;
+  }
+  .alert--section {
+    width: 50%;
+  }
+  .px--5 {
+    padding-left: 1.25rem /* 20px */;
+    padding-right: 1.25rem /* 20px */;
+  }
+}

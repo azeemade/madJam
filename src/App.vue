@@ -1,30 +1,23 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+  <div class="mobile">
+    <router-view />
   </div>
-  <router-view/>
+  <div class="desktop">
+    <div class="d-flex">
+        <div :class="'col-md-2'+($route.name === 'Index') ? 'd-none':''">
+            <WebSidebar />
+        </div>
+        <div :class="($route.name === 'Index') ? 'px--5':'col-md-10' ">
+            <WebNavbar />
+            <router-view/>
+        </div>
+    </div>
+  </div>
 </template>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+<script>
+import WebNavbar from '@/components/web/Navbar.vue'
+import WebSidebar from '@/components/web/Sidebar.vue'
+export default {
+    components: {WebNavbar, WebSidebar}
 }
-
-#nav {
-  padding: 30px;
-}
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
-</style>
+</script>
