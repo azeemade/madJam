@@ -98,6 +98,10 @@ export default {
         width: 100%;
     }
     .image-wrapper{
+        -webkit-filter: blur(250px);
+        -moz-filter: blur(250px);
+        -o-filter: blur(250px);
+        -ms-filter: blur(250px);
         filter: blur(250px);
         border-radius: 8px 8px 0px 0px;
         box-shadow: 1px 2px 16px rgba(0, 0, 0, 0.1);
