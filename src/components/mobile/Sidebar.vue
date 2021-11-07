@@ -13,8 +13,7 @@
                                     <img src="@/assets/images/avatar.png" alt="avatar" width="64" height="64">
                                 </div>
                                 <div v-else>
-                                    <img :src="'https://api.multiavatar.com/'+$store.state.username+'.png'" alt="avatar" width="36" height="36">
-                                    <img src="" alt="avatar" width="36" height="36">
+                                    <img :src="'https://api.multiavatar.com/'+$store.state.username+'.png'" alt="avatar" width="64" height="64">
                                 </div>
                             </div>
                             <p class="mb-3 text-4xl text--dark font-semibold">Hello {{username}},</p>

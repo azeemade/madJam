@@ -29,7 +29,7 @@
         <div class="mt-6 ml-4">
             <div class="d-flex mb-2" v-for="(song, index) in songs" :key="index">
                 <div class="mr-3">
-                    <img :src="playlist.playlist_image" class="rounded song_image" width="40" height="40">
+                    <img :src="playlist.playlist_image" class="rounded song_image" width="56" height="56">
                 </div>
                 <div>
                     <p class="text--dark text-semibold mb-0">{{song.song_title}}</p>
@@ -89,7 +89,7 @@ export default {
 </script>
 <style scoped>
     .song_image{
-        max-height: 40px
+        max-height: 56px
     }
     .image-cover{
         height: 252px;
