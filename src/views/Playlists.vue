@@ -16,7 +16,7 @@
                         data-bs-toggle="dropdown" aria-expanded="false">
                             <i class="bi bi-funnel"></i>
                         </button>
-                        <ul class="dropdown-menu rounded shadow bg--grey border-0" aria-labelledby="dropdownMenu">
+                        <ul class="dropdown-menu rounded shadow border-0" aria-labelledby="dropdownMenu">
                             <li v-for="(val, index) in FilterBy" :key="index" class="align-items-baseline flex" :class="FilterValue == val ? 'text--primary': ''">
                                 <input type="radio" :id="index" :value="val" v-model="FilterValue" class="d-none">
                                 <i class="bi bi-check-lg ms-2" v-show="FilterValue == val"></i>
@@ -69,7 +69,12 @@ export default {
                 })
             }
             else if(this.FilterValue == 'Recently added'){
-                return search.sort(function(a, b){return b.playlist_date - a.playlist_date});
+                return search.sort(function(a, b){
+                var foo = moment(a.playlist_date, "DD/MM/YYYY").format("YYYY-MM-DD");
+                var bar = moment(b.playlist_date, "DD/MM/YYYY").format("YYYY-MM-DD");
+
+                    return new Date( bar ) - new Date( foo )
+                });
             }
             else{
                 return search;

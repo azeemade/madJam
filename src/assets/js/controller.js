@@ -2,18 +2,16 @@ import categories from '@/assets/db/categories.json'
 import playlists from  '@/assets/db/playlists.json'
 import songs from  '@/assets/db/songs.json'
 import moment from 'moment'
-import store from '../../store'
 
 
 let controller = {
     ForYou(){
-        /*var today = moment().format('DD/MM/YYYY')
-        var fyPlaylists = playlists.filter(a=> {
-            var date = a.playlist_date;
-            return (date <= today);
-        })
-        return fyPlaylists;*/
-        return playlists.sort(function(a, b){return b.playlist_date - a.playlist_date}).slice(0,4);
+        return playlists.sort(function(a, b){
+            var foo = moment(a.playlist_date, "DD/MM/YYYY").format("YYYY-MM-DD");
+            var bar = moment(b.playlist_date, "DD/MM/YYYY").format("YYYY-MM-DD");
+
+            return new Date( bar ) - new Date( foo )
+        }).slice(0,4);
     },
     PopularPlaylists(){
         var popPlaylists = playlists.filter(a=> {
@@ -45,6 +43,12 @@ let controller = {
             return a.playlist_slug == slug;
         });
         return sPlaylist;
+    },
+    FindCategory(slug){
+        var sCategory = categories.find(a => {
+            return a.slug == slug;
+        });
+        return sCategory;
     }
 }
 

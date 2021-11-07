@@ -1,6 +1,7 @@
 <template>
     <div class="overflow-cards">
         <div class="col-4" v-for="item, index in categories" :key="index">
+            
             <img :src="'@/assets/images/'+item.url+'.png'" alt="" class="rounded-lg mb-3" width="96" height="84">
             <p class="text--dark text-xs">{{item.title}}</p>
         </div>

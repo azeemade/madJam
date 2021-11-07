@@ -13,7 +13,7 @@
                                     <img src="@/assets/images/avatar.png" alt="avatar" width="64" height="64">
                                 </div>
                                 <div v-else>
-                                    <!--<img :src="'https://api.multiavatar.com/'+$store.state.username+'.png'" alt="avatar" width="36" height="36">-->
+                                    <img :src="'https://api.multiavatar.com/'+$store.state.username+'.png'" alt="avatar" width="36" height="36">
                                     <img src="" alt="avatar" width="36" height="36">
                                 </div>
                             </div>
@@ -32,11 +32,11 @@
                                 <i class="bi bi-grid mr-5"></i>
                                 Browse
                             </router-link>
-                            <router-link to="" class="p-2 rounded-md" data-bs-dismiss="modal">
+                            <router-link to="/subscribe" class="p-2 rounded-md" data-bs-dismiss="modal">
                                 <i class="bi bi-envelope mr-5"></i>
                                 Subscribe
                             </router-link>
-                            <router-link to="" class="p-2 rounded-md" data-bs-dismiss="modal">
+                            <router-link to="/contribute" class="p-2 rounded-md" data-bs-dismiss="modal">
                                 <i class="bi bi-inbox mr-5"></i>
                                 Contribute
                             </router-link>
