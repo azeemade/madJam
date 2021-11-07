@@ -17,23 +17,18 @@
                             <i class="bi bi-funnel"></i>
                         </button>
                         <ul class="dropdown-menu rounded shadow bg--grey border-0" aria-labelledby="dropdownMenu">
-                            <li>
-                                <a class="btn text--dark">
-                                    Title
-                                </a>
-                            </li>
-                            <li>
-                                <a class="btn text--dark">
-                                    Recently added
-                                </a>
+                            <li v-for="(val, index) in FilterBy" :key="index" class="align-items-baseline flex" :class="FilterValue == val ? 'text--primary': ''">
+                                <input type="radio" :id="index" :value="val" v-model="FilterValue" class="d-none">
+                                <i class="bi bi-check-lg ms-2" v-show="FilterValue == val"></i>
+                                <label :for="index" class="btn" :class="FilterValue == val ? 'fw-bold text--primary': 'text--dark'">{{val}}</label>
                             </li>
                         </ul>
                     </div>
                 </div>
                 
-                <PlaylistCardCol :playlists="playlists"/>
+                <PlaylistCardCol :playlists="SearchPlaylists"/>
                 <div ref="formContainer"></div>
-                <button class="bg--dark text--light btn-lg w-100 mb-3" @click.prevent="LoadMore">Load more..</button>
+                <button class="bg--dark text--light btn-lg w-100 mb-3" @click.prevent="LoadMore(10)">Load more..</button>
             </div>
         </div>
 
@@ -42,7 +37,6 @@
     </div>
 </template>
 <script>
-import {mapGetters} from'vuex'
 import controller from '@/assets/js/controller.js'
 import PlaylistCardCol from '@/components/mobile/PlaylistCardCol.vue'
 import BackButton from '@/components/utils/BackButton.vue'
@@ -52,19 +46,38 @@ export default {
     name: "Playlists",
     data(){
         return{
-            searchItem: 'ope',
-            playlists: controller.AllPlaylists(0, this.searchItem),
-            fullPage: false
+            searchItem: '',
+            playlists: controller.AllPlaylists(),
+            fullPage: false,
+            paginate: 10,
+            FilterBy: ['Title', 'Recently added'],
+            FilterValue: ''
         }
     },
     computed:{
-        //...mapGetters(['search'])
-        /*searchItem(){
-            return 'ope'
-        }*/
+        SearchPlaylists(){
+            var search = this.playlists.filter(a => {
+                return a.playlist_title.toLowerCase().includes(this.searchItem.toLowerCase())
+            }).slice(0,this.paginate);
+
+            if(this.FilterValue == 'Title'){
+                return search.sort((a,b) => {
+                    let fa = a.playlist_title.toLowerCase(), fb = b.playlist_title.toLowerCase();
+                    if (fa < fb) {return -1;}
+                    if (fa > fb) {return 1;}
+                    return 0;
+                })
+            }
+            else if(this.FilterValue == 'Recently added'){
+                return search.sort(function(a, b){return b.playlist_date - a.playlist_date});
+            }
+            else{
+                return search;
+            }
+        }
     },
     methods:{
-        LoadMore(){
+        LoadMore(n){
             let loader = this.$loading.show({
                 container: this.fullPage ? null : this.$refs.formContainer,
                 canCancel: false,
@@ -72,7 +85,7 @@ export default {
                 loader: "bars",
             });
 
-            this.playlists = controller.AllPlaylists(10, this.searchItem);
+            this.paginate += n
 
             loader.hide()
         }
