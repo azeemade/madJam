@@ -2,9 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-router-link {
-  all: unset;
-}
 .bg--dark {
   background-color: #2f2e41;
 }

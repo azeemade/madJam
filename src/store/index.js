@@ -5,6 +5,7 @@ const store = createStore({
         return {
             username: '',
             master_image: null,
+            search: ''
         }
     },
 
@@ -20,12 +21,18 @@ const store = createStore({
         },
         SET_MASTER_IMAGE(state, files){
             state.master_image = files
+        },
+        search(state, search){
+            state.search = search
         }
     },
 
     getters:{
         username: state=> {
             return state.username;
+        },
+        search: state=> {
+            return state.search;
         },
     }
 

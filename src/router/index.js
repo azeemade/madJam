@@ -7,6 +7,8 @@ import Categories from '../views/Categories.vue'
 import Search from '../views/Search.vue'
 import Gift from '../views/Gift.vue'
 
+import Playlist from '../views/children/Playlist.vue'
+
 const routes = [
   {
     path: '/',
@@ -28,6 +30,11 @@ const routes = [
     name: 'Playlists',
     component: Playlists
   },
+  {
+    path: '/playlists/:playlist_slug', 
+    name: 'Playlist',
+    component: Playlist
+},
   {
     path: '/search',
     name: 'Search',

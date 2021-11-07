@@ -5,10 +5,10 @@
         </span>
         <input type="text" placeholder="Search for Artists, Playlists, Categories" 
         @click="openSearch" class="form-control rounded-lg searchbar"
-        v-show="channel == 'homepage'">
+        v-show="channel == 'homepage'" v-model="search">
         <input type="text" :placeholder="channel=='category' ? 'Search in categories': 'Search in playlists'" 
         class="form-control rounded-lg searchbar"
-        v-show="channel != 'homepage'">
+        v-show="channel != 'homepage'" @input="$emit('update:searchItem', $event.target.value)">
     </div>
 </template>
 <script>
@@ -23,11 +23,26 @@ export default {
             type: String,
             default: ''
         },
+        searchItem: {
+            type: String,
+            default: ''
+        },
+    },
+    emits: ['update:searchItem'],
+    data(){
+        return{
+            search: ""
+        }
     },
     methods:{
         openSearch(e){
             this.$router.push('/search')
         }
     },
+    /*created(){
+        //SearchData(){
+            this.$store.commit('search', this.search)
+        //}
+    }*/
 }
 </script>

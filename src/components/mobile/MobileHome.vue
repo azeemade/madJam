@@ -4,7 +4,7 @@
         <MobileSidebar />
         <div class="px-3 mt-16">
             <div class="">
-                <div class="d-flex justify-content-between mb-4">
+                <div class="d-flex justify-content-between mb-3">
                     <p class="text-xl text--dark font-medium">For you</p>
                 </div>
                 
@@ -12,18 +12,18 @@
             </div>
 
             <div class="mt-9">
-                <div class="d-flex justify-content-between mb-4">
+                <div class="d-flex justify-content-between mb-3">
                     <p class="text-xl text--dark font-medium">Popular playlists</p>
                     <router-link to="/playlists" class="text--dark text-decoration-underline">
                         view all
                     </router-link>
                 </div>
                 
-                <PlaylistCard />
+                <PlaylistCard :playlists="popPlaylists"/>
             </div>
 
             <div class="mt-9">
-                <div class="d-flex justify-content-between mb-4">
+                <div class="d-flex justify-content-between mb-3">
                     <p class="text-xl text--dark font-medium">Gift playlists</p>
                 </div>
                 <div class="py-5 bg--light px-3">
@@ -36,14 +36,14 @@
             </div>
 
             <div class="mt-9">
-                <div class="d-flex justify-content-between mb-4">
+                <div class="d-flex justify-content-between mb-3">
                     <p class="text-xl text--dark font-medium">Explore categories</p>
                     <router-link to="/categories" class="text--dark text-decoration-underline">
                         view all
                     </router-link>
                 </div>
             
-                <CategoryCardCol :data="null" />
+                <CategoryCardCol :categories="exCategories" />
             </div>
 
             <SubscribeModal />
@@ -68,9 +68,17 @@ export default {
     },
     computed:{
         ForYou(){
-            var playlists = controller.ForYou()
-            return playlists
+            var fyPlaylists = controller.ForYou()
+            return fyPlaylists
+        },
 
+        popPlaylists(){
+            var popPlaylists = controller.PopularPlaylists()
+            return popPlaylists
+        },
+        exCategories(){
+            var exCategories = controller.ExploreCategories()
+            return exCategories
         }
     }
 }
