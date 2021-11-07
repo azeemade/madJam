@@ -13,8 +13,8 @@
         <div class="ml-4">
             <p class="font-bold text-3xl text--dark">{{playlist.playlist_title}}</p>
         </div>
-        <div class="ml-4 mt-2">
-            <p class="text--dark text-lg">{{playlist.description}}</p>
+        <div class="ml-4 mt-1">
+            <p class="text--grey text-lg">{{playlist.description}}</p>
         </div>
         <div class="ml-4 flex mt-1">
             <p>{{playlist.songs_count}} songs
@@ -25,6 +25,17 @@
         <div class="ml-4 mt-4">
             <p class="text--dark font-semibold text-xl mb-4">Listen on</p>
             <a href="" class="text--dark border--dark text-xs p-2 a_">{{playlist.listen_on}}</a>
+        </div>
+        <div class="mt-6 ml-4">
+            <div class="d-flex mb-2" v-for="(song, index) in songs" :key="index">
+                <div class="mr-3">
+                    <img :src="playlist.playlist_image" class="rounded song_image" width="40" height="40">
+                </div>
+                <div>
+                    <p class="text--dark text-semibold mb-0">{{song.song_title}}</p>
+                    <p class="text--grey text-xs mb-0">{{song.artistes.split(/[ ]+/).join(', ')}}</p>
+                </div>
+            </div>
         </div>
         <div class="ml-4 my-3 d-flex">
             <p class="text--dark font-semibold text-xl mb-2 mr-3">Tags:</p>
@@ -44,12 +55,13 @@ export default {
     components: { BackButton},
     data(){
         return{
-            playlist: null
+            playlist: null,
+            songs: controller.AllSongs(this.$route.params.id)
         }
     },
     methods:{
         getPlaylist(){
-            this.playlist = controller.FindPlaylist(this.$route.params.playlist_slug)
+            this.playlist = controller.FindPlaylist(this.$route.params.id)
         }
     },
     computed:{
@@ -68,8 +80,7 @@ export default {
 
             var days = Math.floor(milisec_diff / 1000 / 60 / (60 * 24));
             return days;
-
-        }
+        },
     },
     beforeMount(){
         this.getPlaylist()
@@ -77,8 +88,8 @@ export default {
 }
 </script>
 <style scoped>
-    a.a_{
-        all: unset;
+    .song_image{
+        max-height: 40px
     }
     .image-cover{
         height: 252px;
@@ -102,5 +113,6 @@ export default {
     .border--dark{
         border: 1px solid #3F3D56;
         border-radius: 4px;
+        text-decoration: none;
     }
 </style>

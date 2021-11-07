@@ -38,18 +38,24 @@ let controller = {
         }
         return pl;
     },
-    FindPlaylist(slug){
+    FindPlaylist(pid){
         var sPlaylist = playlists.find(a => {
-            return a.playlist_slug == slug;
+            return a.id == pid;
         });
         return sPlaylist;
     },
-    FindCategory(slug){
+    FindCategory(cid){
         var sCategory = categories.find(a => {
-            return a.slug == slug;
+            return a.id == cid;
         });
         return sCategory;
-    }
+    },   
+    AllSongs(pid){
+        var aSongs = songs.filter(a => {
+            return a.playlist_id == pid;
+        });
+        return aSongs;
+    },
 }
 
 export default controller

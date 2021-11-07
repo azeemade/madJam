@@ -34,7 +34,7 @@ const routes = [
     component: Playlists
   },
   {
-    path: '/playlists/:playlist_slug', 
+    path: '/playlists/:id', 
     name: 'Playlist',
     component: Playlist
   },
@@ -49,7 +49,7 @@ const routes = [
     component: Categories
   },
   {
-    path: '/categories/:_slug', 
+    path: '/categories/:_cid', 
     name: 'Category',
     component: Category
   },

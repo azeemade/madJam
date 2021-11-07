@@ -20,7 +20,7 @@ export default {
     },
     methods:{
         getCategory(){
-            this.category = controller.FindCategory(this.$route.params.slug)
+            this.category = controller.FindCategory(this.$route.params.cid)
         }
     },
     computed:{
