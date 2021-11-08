@@ -1,41 +1,34 @@
 <template>
-    <div class="overflow-cards">
-        <div class="col-4" v-for="item, index in categories" :key="index">
-            
-            <img :src="'@/assets/images/'+item.url+'.png'" alt="" class="rounded-lg mb-3" width="96" height="84">
-            <p class="text--dark text-xs">{{item.title}}</p>
+    <div class="row">
+        <div class="col-6 col-md-3 mb-4" v-for="item, index in categories" :key="index">
+            <router-link :to="`/categories/${item.id}`">
+                <img :src="item.image" :alt="item.category_title" class="rounded-lg mb-3 playlist_image" width="136" height="112">
+                <p class="text--dark font-semibold"  v-html="item.category_title.length > 15 ? item.category_title.substring(0,15) + '...' : item.category_title"></p>
+            </router-link>
         </div>
     </div>
 </template>
 <script>
 export default {
-  components: {  },
     name: 'CategoryCard',
+    props:{
+        categories: {
+            type: Object
+        }
+    },
     data(){
         return{
-            categories: [
-                {
-                    id: 1,
-                    title: 'name 1',
-                    url: 'heroImage'
-                },
-                {
-                    id: 2,
-                    title: 'name 2',
-                    url: 'heroImage'
-                },
-                {
-                    id: 3,
-                    title: 'name 3',
-                    url: 'heroImage'
-                },
-                {
-                    id: 4,
-                    title: 'name 4',
-                    url: 'heroImage'
-                },
-            ]
         }
     }
 }
 </script>
+
+<style scoped>
+    .playlist_image{
+        width: 136px;
+        max-height: 112px;
+    }
+    a{
+        all: unset;
+    }
+</style>

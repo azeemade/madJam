@@ -55,7 +55,7 @@ const routes = [
     meta: { requiresAuth: true }
   },
   {
-    path: '/categories/:_cid', 
+    path: '/categories/:id', 
     name: 'Category',
     component: Category,
     meta: { requiresAuth: true }

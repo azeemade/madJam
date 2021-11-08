@@ -41,6 +41,7 @@ import controller from '@/assets/js/controller.js'
 import PlaylistCardCol from '@/components/mobile/PlaylistCardCol.vue'
 import BackButton from '@/components/utils/BackButton.vue'
 import Searchbar from '@/components/utils/Searchbar.vue'
+import moment from 'moment'
 export default {
     components: { BackButton, Searchbar, PlaylistCardCol },
     name: "Playlists",

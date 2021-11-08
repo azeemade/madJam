@@ -38,6 +38,15 @@ let controller = {
         }
         return pl;
     },
+    AllCategories(){
+        var ca = []
+        for(;;){
+            var exCategories = categories[Math.floor(Math.random() * categories.length)];
+            if(ca.indexOf(exCategories) === -1) ca.push(exCategories);
+            if (ca.length == categories.length){ break;}
+        }
+        return ca;
+    },
     FindPlaylist(pid){
         var sPlaylist = playlists.find(a => {
             return a.id == pid;
