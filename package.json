@@ -7,6 +7,7 @@
     "dev": "vite"
   },
   "dependencies": {
+    "clipboard-polyfill": "^3.0.3",
     "moment": "^2.29.1",
     "vue": "^3.2.16",
     "vue-loading-overlay": "^4.0.4",

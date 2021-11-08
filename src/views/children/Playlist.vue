@@ -10,8 +10,39 @@
                 <img :src="playlist.playlist_image" alt="" class="rounded image" width="246" height="180">
             </div>
         </div>
-        <div class="ml-4">
+        <div class="mx-4 d-flex justify-content-between">
             <p class="font-bold text-3xl text--dark">{{playlist.playlist_title}}</p>
+            <div class="dropdown">
+                <button class="btn border" type="button" id="dropdownMenu"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="bi bi-three-dots-vertical"></i>
+                </button>
+                <ul class="dropdown-menu rounded shadow border-0" aria-labelledby="dropdownMenu">
+                    <li class="align-items-baseline flex justify-content-between p-3">
+                        <a @click="CopyLink">Copy link</a>
+                        <i class="bi bi-clipboard"></i>
+                    </li>
+                    <li class="align-items-baseline flex justify-content-between desktop p-3">
+                        <a target="_blank" class="" rel="noopener" :href="'https://www.facebook.com/sharer.php?u=https://madJam.netlify.app'+$route.fullPath">
+                            Share to Facebook
+                        </a>
+                        <i class="bi bi-facebook"></i>
+                    </li>
+                    <li class="align-items-baseline flex justify-content-between desktop p-3">
+                        <a target="_blank" class="" rel="noopener" :href="'https://twitter.com/intent/tweet?text=Share+Text&amp;url=https://madjam.netlify.app'+$route.fullPath">
+                            Share on Twitter
+                        </a>
+                        <i class="bi bi-twitter"></i>
+                    </li>
+                    <li class="p-3">
+                        <web-share-wrapper text="Share via ..." :sharetitle="playlist.playlist_title+'- madJam: Listen to carefully curated playlists '"
+                        :sharetext="playlist.description" 
+                        :shareurl="'https://madjam.netlify.app'+$route.fullPath">
+                            <a>Share via ...</a>  
+                        </web-share-wrapper>
+                    </li>
+                </ul>
+            </div>
         </div>
         <div class="ml-4 mt-1">
             <p class="text--grey text-lg">{{playlist.description}}</p>
@@ -47,7 +78,8 @@
     </div>
 </template>
 <script>
-import controller from '@/assets/js/controller.js'
+import * as clipboard from "clipboard-polyfill/text";
+import controller from '@/assets/js/controller.js';
 import BackButton from '@/components/utils/BackButton.vue';
 import moment from 'moment'
 export default {
@@ -62,6 +94,9 @@ export default {
     methods:{
         getPlaylist(){
             this.playlist = controller.FindPlaylist(this.$route.params.id)
+        },
+        CopyLink(){
+            clipboard.writeText('https://madjam.netlify.app'+this.$route.fullPath);
         }
     },
     computed:{

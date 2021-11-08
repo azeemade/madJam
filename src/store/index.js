@@ -3,7 +3,7 @@ import { createStore } from 'vuex'
 const store = createStore({
     state(){
         return {
-            username: '',
+            username: localStorage.getItem('username'),
             master_image: null,
             search: ''
         }

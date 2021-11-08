@@ -56,6 +56,9 @@ let controller = {
         });
         return aSongs;
     },
+    TextTruncate(n,text){
+        text.length > n ? text.substring(0,n) + '...' : text
+    }
 }
 
 export default controller

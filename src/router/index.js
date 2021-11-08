@@ -1,4 +1,4 @@
-import { createRouter, createWebHashHistory } from 'vue-router'
+import { createRouter, createWebHistory } from 'vue-router'
 import Index from '../views/Index.vue'
 import Home from '../views/Home.vue'
 import Browse from '../views/Browse.vue'
@@ -21,37 +21,44 @@ const routes = [
   {
     path: '/home',
     name: 'Home',
-    component: Home
+    component: Home,
+    meta: { requiresAuth: true }
   },
   {
     path: '/browse',
     name: 'Browse',
-    component: Browse
+    component: Browse,
+    meta: { requiresAuth: true }
   },
   {
     path: '/playlists',
     name: 'Playlists',
-    component: Playlists
+    component: Playlists,
+    meta: { requiresAuth: true }
   },
   {
     path: '/playlists/:id', 
     name: 'Playlist',
-    component: Playlist
+    component: Playlist,
+    meta: { requiresAuth: true }
   },
   {
     path: '/search',
     name: 'Search',
-    component: Search
+    component: Search,
+    meta: { requiresAuth: true }
   },
   {
     path: '/categories',
     name: 'Categories',
-    component: Categories
+    component: Categories,
+    meta: { requiresAuth: true }
   },
   {
     path: '/categories/:_cid', 
     name: 'Category',
-    component: Category
+    component: Category,
+    meta: { requiresAuth: true }
   },
   {
     path: '/gift',
@@ -67,15 +74,32 @@ const routes = [
   {
     path: '/contribute',
     name: 'Contribute',
-    component: Contribute
+    component: Contribute,
+    meta: { requiresAuth: true }
   },
 ]
 
 const router = createRouter({
-  history: createWebHashHistory(),
+  history: createWebHistory(),
   routes
 })
 
+router.beforeEach((to, from, next) => {
+  if (to.matched.some(record => record.meta.requiresAuth)){
+      if (localStorage.getItem('username') == null){
+          next({
+              path:'/',
+              query: { redirect: to.fullPath }
+          })
+      }
+      else{
+        next()
+      }
+  }
+  else {
+    next()
+  }
+})
 
 router.beforeResolve((to, from, next) => {
   // If this isn't an initial page load.

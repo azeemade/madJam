@@ -7,13 +7,13 @@
                         <button type="button" class="btn-close text--dark" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        <div class="mt-14 mb-4">
+                        <div class="mt-10 mb-4">
                             <div class="mb-4">
-                                <div v-if="$store.state.username == ''">
+                                <div v-if="username == ''">
                                     <img src="@/assets/images/avatar.png" alt="avatar" width="64" height="64">
                                 </div>
                                 <div v-else>
-                                    <img :src="'https://api.multiavatar.com/'+$store.state.username+'.png'" alt="avatar" width="64" height="64">
+                                    <img :src="'https://api.multiavatar.com/'+username+'.png'" alt="avatar" width="72" height="72">
                                 </div>
                             </div>
                             <p class="mb-3 text-4xl text--dark font-semibold">Hello {{username}},</p>

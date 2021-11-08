@@ -48,7 +48,13 @@ export default {
             }
             else{
                 this.$store.commit('add_username', this.username);
-                this.$router.push('/home')
+                if (localStorage.getItem('username') != null) {
+                    if (this.$route.query.redirect != null) {
+                        this.$router.push(this.$route.query.redirect)
+                    } else {
+                        this.$router.push('/home')
+                    }
+                }
             }
         }
     },
