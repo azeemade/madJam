@@ -41,7 +41,19 @@ export default {
         goBack(){
             window.history.back()
         }
-    }
+    },
+    
+    /*metaInfo: {
+        title: 'Search',
+        meta: [
+        { name: 'description', content: 'Browse a wide range of playlists and playlist categories created specially for your delight. Available on Apple music, Spotify and Youtube music.'}, 
+        { property: 'og:title', content: 'Search' },
+        { property: 'og:url', content: 'https://madjam.netlify.app/search' },
+        { property: 'og:description', content: 'Browse a wide range of playlists and playlist categories created specially for your delight. Available on Apple music, Spotify and Youtube music.' },
+        { property: 'twitter:title', content: 'Search' },
+        { property: 'twitter:description', content: 'Browse a wide range of playlists and playlist categories created specially for your delight. Available on Apple music, Spotify and Youtube music.' },
+        ]
+    }*/
 }
 </script>
 <style scoped>

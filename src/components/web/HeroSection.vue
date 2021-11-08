@@ -22,7 +22,7 @@
                 </div>
             </div>
             <div class="col-md-4">
-                <img src="@/assets/images/undraw_happy_music.png" alt="happy music" width="392" height="344">
+                <img src="@/assets/images/undraw_happy_music.png" alt="Listen to carefully curated playlists" width="392" height="344">
             </div>
         </div>
     </div>

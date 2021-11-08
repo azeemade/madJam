@@ -46,7 +46,18 @@ import BackButton from '@/components/utils/BackButton.vue'
 import CategoryCardCol from '@/components/utils/CategoryCardCol.vue'
 import Searchbar from '@/components/utils/Searchbar.vue'
 export default {
-  components: { BackButton, Searchbar, CategoryCardCol },
-  name: "Categories",
+    components: { BackButton, Searchbar, CategoryCardCol },
+    name: "Categories",
+    /*metaInfo: {
+        title: 'Categories',
+        meta: [
+        { name: 'description', content: 'Browse a wide range of playlists and playlist categories created specially for your delight. Available on Apple music, Spotify and Youtube music.'}, 
+        { property: 'og:title', content: 'Categories' },
+        { property: 'og:url', content: 'https://madjam.netlify.app/categories' },
+        { property: 'og:description', content: 'Browse a wide range of playlists and playlist categories created specially for your delight. Available on Apple music, Spotify and Youtube music.' },
+        { property: 'twitter:title', content: 'Categories' },
+        { property: 'twitter:description', content: 'Browse a wide range of playlists and playlist categories created specially for your delight. Available on Apple music, Spotify and Youtube music.' },
+        ]
+    }*/
 }
 </script>

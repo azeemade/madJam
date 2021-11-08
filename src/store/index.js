@@ -1,11 +1,13 @@
 import { createStore } from 'vuex'
+import controller from '../assets/js/controller';
 
 const store = createStore({
     state(){
         return {
             username: localStorage.getItem('username'),
             master_image: null,
-            search: ''
+            search: '',
+            playlist: null
         }
     },
 
@@ -24,6 +26,10 @@ const store = createStore({
         },
         search(state, search){
             state.search = search
+        },
+        FetchPlaylist(state, id){
+            let pl = controller.FindPlaylist(id)
+            state.playlist = pl
         }
     },
 
@@ -34,6 +40,9 @@ const store = createStore({
         search: state=> {
             return state.search;
         },
+        playlist: state=> {
+            return state.playlist;
+        }
     }
 
 })

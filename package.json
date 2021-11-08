@@ -10,7 +10,9 @@
     "clipboard-polyfill": "^3.0.3",
     "moment": "^2.29.1",
     "vue": "^3.2.16",
+    "vue-3-meta": "^2.4.0",
     "vue-loading-overlay": "^4.0.4",
+    "vue-meta": "^2.4.0",
     "vue-router": "^4.0.0-0",
     "vuex": "^4.0.2"
   },

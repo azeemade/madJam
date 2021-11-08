@@ -95,6 +95,17 @@ export default {
             loader.hide()
         }
     },
+    /*metaInfo: {
+        title: 'Playlists',
+        meta: [
+        { name: 'description', content: 'Browse a wide range of playlists and playlist categories created specially for your delight. Available on Apple music, Spotify and Youtube music.'}, 
+        { property: 'og:title', content: 'Playlists' },
+        { property: 'og:url', content: 'https://madjam.netlify.app/Playlists' },
+        { property: 'og:description', content: 'Browse a wide range of playlists and playlist categories created specially for your delight. Available on Apple music, Spotify and Youtube music.' },
+        { property: 'twitter:title', content: 'Playlists' },
+        { property: 'twitter:description', content: 'Browse a wide range of playlists and playlist categories created specially for your delight. Available on Apple music, Spotify and Youtube music.' },
+      ]
+    }*/
 
 }
 </script>
