@@ -1,8 +1,10 @@
 <template>
     <div>
         <div>
-            <BackButton />
-            <p class="text--dark">Back</p>
+            <button @click="goBack" class="btn ps-0 text-dark">
+                <i class="bi bi-chevron-left mr-2"></i>
+                Back
+            </button>
         </div>
         <div class="px-3">
             <p class="font-semibold fs-3 text--dark mb-4">Gift playlists</p>
@@ -64,6 +66,7 @@
 </template>
 <script>
 import BackButton from '@/components/utils/BackButton.vue'
+import moment from 'moment'
 export default {
     name: 'MobileGift2',
     components: { BackButton },
@@ -107,6 +110,9 @@ export default {
             setTimeout(() => {
                 this.message = null;
             }, 5000);
+        },
+        goBack(){
+            this.$store.commit('OpenGift1')
         }
     }
 }

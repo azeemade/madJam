@@ -72,6 +72,18 @@ let controller = {
         return playlists.filter(a=> {
             return a.category_id = cid;
         })
+    },
+    RelatedPlaylists(cid){
+        var playlists_ = playlists.filter(a=> {
+            return a.category_id = cid;
+        })
+        var pl = []
+        for(;;){
+            var rePlaylists = playlists_[Math.floor(Math.random() * playlists_.length)];
+            if(pl.indexOf(rePlaylists) === -1) pl.push(rePlaylists);
+            if (pl.length == 2){ break;}
+        }
+        return pl;
     }
 }
 

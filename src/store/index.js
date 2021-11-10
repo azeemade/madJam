@@ -8,7 +8,9 @@ const store = createStore({
             master_image: null,
             search: '',
             playlist: null,
-            recents: []
+            recents: [],
+            gift_1 : true,
+            gift_2: false
         }
     },
 
@@ -45,6 +47,14 @@ const store = createStore({
                     }
                 }
             }*/
+        },
+        OpenGift1(state){   
+            state.gift_1 = true
+            state.gift_2 = false
+        },
+        OpenGift2(state){   
+            state.gift_1 = false
+            state.gift_2 = true
         }
     },
 
@@ -61,6 +71,12 @@ const store = createStore({
         recents: state=>{
             var recents = state.recents.slice(0,3)
             return recents;
+        },
+        gift_1: state=>{
+            return state.gift_1;
+        },
+        gift_2: state=>{
+            return state.gift_2;
         }
     }
 

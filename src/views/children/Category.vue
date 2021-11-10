@@ -55,6 +55,10 @@
         <div class="mx-4">
             <button class="bg--dark text--light btn-lg w-100 mb-3" @click="LoadMore(6)">Load more..</button>
         </div>
+        <!--<div class="ml-4 mt-3">
+            <p class="text--dark font-bold text-2xl">Related Categories</p>
+            <CategoryCard :categories="RelatedCategories"/>
+        </div>-->
     </div>
 </template>
 <script>
@@ -108,7 +112,10 @@ export default {
         },
         playlists(){
             return controller.GetPlaylists(this.$route.params.id).slice(0,this.paginate)
-        }
+        },
+        /*RelatedCategories(){
+            return controller.RelatedCategories(this.category.category_id).slice(0,2);
+        }*/
     },
     beforeMount(){
         this.getCategory()

@@ -44,38 +44,10 @@
                                 Gift playlist
                             </router-link>
                         </div>
-                        <!--<ul class="mt-5">
-                            <li class="mb-3">
-                                
-                            </li>
-                            <li>
-                                
-                            </li>
-                            <li class="mb-3">
-                                <button class="p-2 rounded-md" data-bs-toggle="modal" data-bs-target="#subscribeModal">
-                                    <i class="bi bi-envelope-open mr-5"></i>
-                                    Subscribe
-                                </button>
-                            </li>
-                            <li>
-                                <button class="p-2 rounded-md" data-bs-toggle="modal" data-bs-target="#contributeModal">
-                                    <i class="bi bi-inbox mr-5"></i>
-                                    Contribute
-                                </button>
-                            </li>
-                            <li class="mb-3">
-                                <router-link to="/gift" class="p-2 rounded-md">
-                                    <i class="bi bi-gift mr-5"></i>
-                                    Gift playlist
-                                </router-link>
-                            </li>
-                        </ul>-->
                     </div>
                 </div>
             </div>
         </div>
-        <!--<subscribe />
-        <contribute />-->
     </div>
 </template>
 <script>

@@ -75,17 +75,21 @@
                 <router-link to="" class="mr-2 text-lg">{{tag}}</router-link>
             </div>   
         </div>
+        <div class="ml-4 mb-3">
+            <p class="text--dark font-bold text-2xl">Related Playlists</p>
+            <PlaylistCardCol :playlists="RelatedPlaylists"/>
+        </div>
     </div>
 </template>
 <script>
 import * as clipboard from "clipboard-polyfill/text";
 import controller from '@/assets/js/controller.js';
 import BackButton from '@/components/utils/BackButton.vue';
-//import {mapGetter} forom 'vuex'
+import PlaylistCardCol from '@/components/mobile/PlaylistCardCol.vue'
 import moment from 'moment'
 export default {
     name: 'Playlist',
-    components: { BackButton},
+    components: { BackButton, PlaylistCardCol},
     data(){
         return{
             playlist: {},
@@ -130,6 +134,9 @@ export default {
             var days = Math.floor(milisec_diff / 1000 / 60 / (60 * 24));
             return days;
         },
+        RelatedPlaylists(){
+            return controller.RelatedPlaylists(this.playlist.category_id);
+        }
     },
     beforeMount(){
         this.getPlaylist()

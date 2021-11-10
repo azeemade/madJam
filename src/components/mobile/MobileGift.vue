@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div v-show="gift_1">
         <MobileNavbar />
         <MobileSidebar />
         <div class="px-3 mt-16">
@@ -27,26 +27,35 @@
                 <textarea name="pdesc" id="pdesc" cols="30" rows="5" class="form-control"  v-model="description"
                 placeholder="Specify an artiste, category, genre, mood, song or other stuffs to narrow the playlist interest."></textarea>
             </div>
-            <button class="bg--dark text--light btn btn-lg w-100 mb-3">Continue</button>
-             <div v-show="message != null" :class="message == 'Success' ? 'alert alert-success' : 'alert alert-danger'">
-                <p :class="message == 'Success' ? 'text-success' : 'text-danger'">{{message}}</p>
+            <button class="bg--dark text--light btn btn-lg w-100 mb-3" @click="Submit">Continue</button>
+            <div v-show="message != null">
+                <Error :alert_type="'warning'" :message="message" />
             </div>
         </div>
+    </div>
+    <div ref="formContainer"></div>
+    <div v-show="gift_2">
+        <MobileGift2 />
     </div>
 </template>
 <script>
 import MobileNavbar from '@/components/mobile/Navbar.vue'
 import MobileSidebar from '@/components/mobile/Sidebar.vue'
+import Error from '@/components/utils/Error.vue'
+import MobileGift2 from '@/components/mobile/MobileGift2.vue'
+import {mapGetters} from 'vuex'
 export default {
     name: 'MobileGift',
-    components: { MobileSidebar, MobileNavbar },
+    components: { MobileSidebar, MobileNavbar, Error, MobileGift2 },
     data(){
         return{
             pname: null,
             psize: null,
             remarks: null, 
             description: null,
-            message: null
+            message: null,
+            fullPage: false
+
         }
     },
     methods:{
@@ -54,13 +63,27 @@ export default {
             if (this.pname == null || this.psize == null || this.description == null ){
                 this.message = "One or more fields are empty"
             }else{
-                this.message = "Success"
-            }   
+                let loader = this.$loading.show({
+                    container: this.fullPage ? null : this.$refs.formContainer,
+                    canCancel: false,
+                    onCancel: this.onCancel,
+                    loader: "bars",
+                });
+
+                this.$store.commit('OpenGift2')
+
+                loader.hide()
+            }
 
             setTimeout(() => {
                 this.message = null;
             }, 5000);
         }
+    },
+    computed:{
+        ...mapGetters([
+            'gift_1', 'gift_2'
+        ])
     }
 }
 </script>

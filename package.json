@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "clipboard-polyfill": "^3.0.3",
+    "image-upload-vue": "^0.2.0",
     "moment": "^2.29.1",
     "vue": "^3.2.16",
     "vue-3-meta": "^2.4.0",
