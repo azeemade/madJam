@@ -67,6 +67,11 @@ let controller = {
     },
     TextTruncate(n,text){
         text.length > n ? text.substring(0,n) + '...' : text
+    },
+    GetPlaylists(cid){
+        return playlists.filter(a=> {
+            return a.category_id = cid;
+        })
     }
 }
 

@@ -23,7 +23,7 @@
                         <Searchbar channel="homepage" />
 
                         <div class="mt-5 d-grid">
-                            <router-link to="/home" class="p-2 rounded-md">
+                            <router-link to="/home" class="p-2 rounded-md" data-bs-dismiss="modal">
                                 <i class="bi bi-house mr-5"></i>
                                 Home
                             </router-link>
@@ -39,7 +39,7 @@
                                 <i class="bi bi-inbox mr-5"></i>
                                 Contribute
                             </router-link>
-                            <router-link to="/gift" class="p-2 rounded-md" data-dismiss="modal">
+                            <router-link to="/gift" class="p-2 rounded-md" data-bs-dismiss="modal">
                                 <i class="bi bi-gift mr-5"></i>
                                 Gift playlist
                             </router-link>

@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  font-family: "Nunito", sans-serif;
+  background-color: rgb(212, 211, 211);
+}
+
 .bg--dark {
   background-color: #2f2e41;
 }
@@ -71,10 +76,6 @@
 
 .name-input::placeholder {
   color: #c4c4c4;
-}
-
-body {
-  background-color: white;
 }
 
 .searchbar {

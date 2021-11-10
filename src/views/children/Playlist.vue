@@ -73,8 +73,7 @@
             <p class="text--dark font-semibold text-xl mb-2 mr-3">Tags:</p>
             <div class="flex" v-for="tag, index in getTags" :key="index">
                 <router-link to="" class="mr-2 text-lg">{{tag}}</router-link>
-            </div>
-            
+            </div>   
         </div>
     </div>
 </template>
