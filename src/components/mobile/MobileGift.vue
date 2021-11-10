@@ -6,9 +6,11 @@
             <p class="font-semibold fs-3 text--dark mb-4">Gift playlists</p>
             <p class="text--dark-50">Playlist details</p>
             <hr class="bg--grey-50 mb-3">
+
             <div>
                 <!--Image section-->
-            </div>
+            </div>  
+
             <div class="mb-3">
                 <label for="pname" class="text--dark">Playlist name *</label>
                 <input type="text" name="pname" id="pname" class="form-control" v-model="pname">

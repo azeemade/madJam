@@ -36,7 +36,7 @@ export default {
     },
     methods:{
         openSearch(e){
-            this.$router.push('/search')
+            this.$router.push('/search?q=')
         }
     },
     /*created(){

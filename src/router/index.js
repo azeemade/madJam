@@ -49,9 +49,10 @@ const routes = [
     path: '/search',
     name: 'Search',
     component: Search,
+    props: route => ({ query: route.query.q}),
     meta: { requiresAuth: true }
   },
-  {
+  /*{
     path: '/search/all?query=:q',
     name: 'SearchAll',
     component: SearchAll,
@@ -68,7 +69,7 @@ const routes = [
     name: 'SearchCategory',
     component: SearchCategory,
     meta: { requiresAuth: true }
-  },
+  },*/
   {
     path: '/categories',
     name: 'Categories',

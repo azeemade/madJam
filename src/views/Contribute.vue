@@ -72,7 +72,6 @@
 <script>
 import MobileNavbar from '@/components/mobile/Navbar.vue'
 import MobileSidebar from '@/components/mobile/Sidebar.vue'
-import controller from '@/assets/js/controller.js'
 import BackButton from '@/components/utils/BackButton.vue';
 import Error from '../components/utils/Error.vue';
 export default {

@@ -83,7 +83,7 @@ export default {
     name: 'Search',
     data(){
         return{
-            search: '',
+            search: '' || this.$route.query.q,
             pagPlaylist: 4,
             pagCategory: 4,
         }
