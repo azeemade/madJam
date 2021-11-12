@@ -11,9 +11,6 @@ import Contribute from '../views/Contribute.vue'
 
 import Playlist from '../views/children/Playlist.vue'
 import Category from '../views/children/Category.vue'
-import SearchAll from '../views/children/SearchAll.vue'
-import SearchCategory from '../views/children/SearchCategory.vue'
-import SearchPlaylist from '../views/children/SearchPlaylist.vue'
 
 const routes = [
   {
@@ -52,24 +49,6 @@ const routes = [
     props: route => ({ query: route.query.q}),
     meta: { requiresAuth: true }
   },
-  /*{
-    path: '/search/all?query=:q',
-    name: 'SearchAll',
-    component: SearchAll,
-    meta: { requiresAuth: true }
-  },
-  {
-    path: '/search/playlist?query=:q',
-    name: 'SearchPlaylist',
-    component: SearchPlaylist,
-    meta: { requiresAuth: true }
-  },
-  {
-    path: '/search/category?query=:q',
-    name: 'SearchCategory',
-    component: SearchCategory,
-    meta: { requiresAuth: true }
-  },*/
   {
     path: '/categories',
     name: 'Categories',

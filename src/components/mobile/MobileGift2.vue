@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div :class="checkout==true? opac:''">
         <div>
             <button @click="goBack" class="btn ps-0 text-dark">
                 <i class="bi bi-chevron-left mr-2"></i>
@@ -23,14 +23,14 @@
                 </div>
             </div>
             <div class="mb-3">
-                <label for="rname" class="text--dark font-semibold">From *</label>
+                <label for="rname" class="text--dark font-semibold" v-html="recipient == 'Self'? 'Name *': 'From *'"></label>
                 <input type="text" placeholder="Enter your name" 
-                    class="form-control" v-model="fname">
+                    class="form-control" v-model="bname">
             </div>
             <div class="mb-3">
                 <label for="email" class="text--dark font-semibold">Email *</label>
                 <input type="text" placeholder="Enter your email" 
-                class="form-control" v-model="femail">
+                class="form-control" v-model="bemail">
             </div>
             <div v-show="recipient != 'Self'">
                 <div class="mb-3">
@@ -57,26 +57,31 @@
                 <label for="dDate" class="text--dark font-semibold">Delivery date *</label>
                 <input type="date" class="form-control"  v-model="dDate">
             </div>
-            <button class="bg--dark text--light btn btn-lg w-100 mb-3">Continue</button>
+            <button class="bg--dark text--light btn btn-lg w-100 mb-3" @click="Submit">Continue</button>
              <div v-show="message != null" :class="message == 'Success' ? 'alert alert-success' : 'alert alert-danger'">
                 <p :class="message == 'Success' ? 'text-success' : 'text-danger'">{{message}}</p>
             </div>
         </div>
     </div>
+    <div v-show="checkout">
+        <Checkout />
+    </div>
 </template>
 <script>
 import BackButton from '@/components/utils/BackButton.vue'
+import Checkout from '@/components/utils/Checkout.vue'
+import {mapGetters} from 'vuex'
 import moment from 'moment'
 export default {
     name: 'MobileGift2',
-    components: { BackButton },
+    components: { BackButton, Checkout },
     data(){
         return{
             recipient: null,
             rname: null,
             remail: null,
-            fname: null,
-            femail: null,
+            bname: null,
+            bemail: null,
             provider: 'init',
             providerOptions: [
                 {title: 'Apple music'},
@@ -84,17 +89,39 @@ export default {
                 {title: 'Youtube music'},
             ],
             dDate: moment().format('YYYY-MM-DD'),
-            message: null
+            message: null,
         }
     },
     methods:{
         Submit(){
-            if (this.fname == null || this.femail == null &&  this.recipient == 'Self')
+            const gift = {
+                recipient: this.recipient,
+                r_name: this.rname,
+                r_email: this.remail,
+                b_name: this.bname,
+                b_email: this.bemail,
+                provider: this.provider
+            }
+            this.$store.commit('UpdateGift', gift)
+            let boolval = true;
+            this.$store.commit('OpenModal', boolval)
+
+            
+            /*if(this.recipient == 'Self'){
+                if (this.bname == null || this.bemail == null){
                     this.message = "Your name and email fields cannot be empty"
+                }
+            }
+            else{
+                 if (this.bname == null || this.bemail == null || this.rname == null || this.remail == null){
+                    this.message = "Names and emails fields cannot be empty"
+                }
+            }*/
+
+            /*if (this.bname == null || this.bemail == null &&  this.recipient == 'Self'){
+                    this.message = "Your name and email fields cannot be empty"
+            }
                 else{
-                    /*if (this.recipient == 'Others' && this.fname == null || this.femail==null || this.rname == null || this.remail == null)
-                            this.message = "Some fields in playlist recipient are empty"
-                    else{*/
                         if(this.dDate == moment().format('YYYY-MM-DD'))
                             this.message = "Deliveries takes up to 24 hours"
                         else{
@@ -105,7 +132,7 @@ export default {
                             }
                         }
                     //}
-                }   
+                }   */
 
             setTimeout(() => {
                 this.message = null;
@@ -114,11 +141,19 @@ export default {
         goBack(){
             this.$store.commit('OpenGift1')
         }
+    },
+    computed:{
+        ...mapGetters([
+            'checkout'
+        ])
     }
 }
 </script>
 <style scoped>
     .form-control::placeholder {
         color: #c4c4c480;
+    }
+    .opac{
+        background-color: rgba(0,0,0,0.4);
     }
 </style>

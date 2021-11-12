@@ -72,6 +72,14 @@ export default {
                     loader: "bars",
                 });
 
+                const gift = {
+                    name: this.pname,
+                    size: this.psize,
+                    remarks: this.remarks,
+                    descripton: this.descripton
+                }
+                this.$store.commit('Gift', gift)
+
                 this.$store.commit('OpenGift2')
 
                 loader.hide()

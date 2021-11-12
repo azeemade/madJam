@@ -1,4 +1,5 @@
 import { createStore } from 'vuex'
+//import Vue from 'vue'
 import controller from '../assets/js/controller';
 
 const store = createStore({
@@ -10,7 +11,9 @@ const store = createStore({
             playlist: null,
             recents: [],
             gift_1 : true,
-            gift_2: false
+            gift_2: false,
+            gift: [],
+            checkout: false
         }
     },
 
@@ -55,6 +58,16 @@ const store = createStore({
         OpenGift2(state){   
             state.gift_1 = false
             state.gift_2 = true
+        },
+
+        Gift(state, gift){
+            state.gift.push(gift);
+        },
+        UpdateGift(state, gift){
+            state.gift.push(gift);
+        },
+        OpenModal(state, boolval){
+            state.checkout = boolval
         }
     },
 
@@ -77,7 +90,10 @@ const store = createStore({
         },
         gift_2: state=>{
             return state.gift_2;
-        }
+        },
+        checkout: state=>{
+            return state.checkout;
+        },
     }
 
 })
