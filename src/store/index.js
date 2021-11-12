@@ -12,8 +12,9 @@ const store = createStore({
             recents: [],
             gift_1 : true,
             gift_2: false,
-            gift: [],
-            checkout: false
+            gift: {},
+            checkout: false,
+            sidenav: false
         }
     },
 
@@ -61,13 +62,17 @@ const store = createStore({
         },
 
         Gift(state, gift){
-            state.gift.push(gift);
+            state.gift = {}
+            state.gift = Object.assign(state.gift, gift)
         },
         UpdateGift(state, gift){
-            state.gift.push(gift);
+            state.gift = Object.assign(state.gift, gift)
         },
         OpenModal(state, boolval){
             state.checkout = boolval
+        },
+        OpenSideNav(state, boolval){
+            state.sidenav = boolval
         }
     },
 
@@ -93,6 +98,12 @@ const store = createStore({
         },
         checkout: state=>{
             return state.checkout;
+        },
+        gift: state=> {
+            return state.gift;
+        },
+        sidenav: state=>{
+            return state.sidenav;
         },
     }
 

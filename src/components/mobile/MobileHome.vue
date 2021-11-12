@@ -1,7 +1,6 @@
 <template>
-    <div>
-        <MobileNavbar />
         <MobileSidebar />
+        <MobileNavbar />
         <div class="px-3 mt-16">
             <div class="">
                 <div class="d-flex justify-content-between mb-3">
@@ -48,7 +47,6 @@
 
             <SubscribeModal />
         </div>
-    </div>
 </template>
 <script>
 import PlaylistCard from '@/components/mobile/PlaylistCard.vue'

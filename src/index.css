@@ -4,7 +4,6 @@
 
 body {
   font-family: "Nunito", sans-serif;
-  background-color: rgb(212, 211, 211);
 }
 
 .bg--dark {
@@ -83,6 +82,22 @@ body {
 }
 .searchbar::placeholder {
   color: #2f2e4180;
+}
+
+.playlists-image {
+  background-size: cover;
+  width: 136px;
+  height: 112px;
+}
+.playlist-image {
+  background-size: cover;
+  width: 56px;
+  height: 56px;
+}
+.song-image {
+  background-size: cover;
+  width: 56px;
+  height: 56px;
 }
 
 .overflow-cards {

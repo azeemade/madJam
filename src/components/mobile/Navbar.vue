@@ -1,7 +1,7 @@
 <template>
     <nav class="fixed-top d-flex justify-content-between align-items-center bg--light">
         <div class="pt-2">
-            <button class="btn" data-bs-toggle="modal" data-bs-target="#mobileModal">
+            <button class="btn" @click="OpenSideNav">
                 <i class="bi bi-justify-left"></i>
             </button>
         </div>
@@ -14,7 +14,13 @@
 <script>
 import MobileSidebar from '@/components/mobile/Sidebar.vue'
 export default {
-  components: { MobileSidebar },
+    components: { MobileSidebar },
     name: 'MobileNavbar',
+    methods:{
+        OpenSideNav(){
+            var boolval = true
+            this.$store.commit('OpenSideNav', boolval);
+        }
+    }
 }
 </script>

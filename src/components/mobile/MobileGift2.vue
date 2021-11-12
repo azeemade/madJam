@@ -1,7 +1,7 @@
 <template>
-    <div :class="checkout==true? opac:''">
-        <div>
-            <button @click="goBack" class="btn ps-0 text-dark">
+    <div :class="checkout==true? 'bg-gray-200':''">
+        <div class="ml-3">
+            <button @click="goBack" class="btn ps-0 text-dark ml-2 my-3">
                 <i class="bi bi-chevron-left mr-2"></i>
                 Back
             </button>
@@ -12,14 +12,22 @@
             <hr class="bg--grey-50 mb-3">
 
             <div class="mb-3">
-                <label for="recipient" class="text--dark font-semibold">Recipient *</label>
-                <div class="form-check">
-                    <input type="radio" name="recipient" class="form-check-input" id="recipient1" v-model="recipient" value="Self">
-                    <label for="recipient1" class="text--dark-50 form-check-label">Self</label>
-                </div>
-                <div class="form-check">
-                    <input type="radio" name="recipient" class="form-check-input" id="recipient2" v-model="recipient" value="Others">
-                    <label for="recipient2" class="text--dark-50 form-check-label">Others (Someone special)</label>
+                <label for="recipient" class="text--dark font-semibold mb-3">Recipient *</label>
+                <div class="d-flex">
+                    <div class="form-check">
+                        <input type="radio" name="recipient" class="form-check-input d-none" id="recipient1" v-model="recipient" value="Self">
+                        <label for="recipient1" class="form-check-label btn fs-4" :class="recipient == 'Self' ? 'btn--dark-active' : 'btn--dark-inactive'">
+                            <i :class="recipient == 'Self' ? 'ri-user-line' : 'ri-user-fill'"></i>
+                            Self
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input type="radio" name="recipient" class="form-check-input d-none" id="recipient2" v-model="recipient" value="Others">
+                        <label for="recipient2" class="form-check-label btn fs-4" :class="recipient == 'Others' ? 'btn--dark-active' : 'btn--dark-inactive'">
+                            <i :class="recipient == 'Others' ? 'ri-group-line' : 'ri-group-fill'"></i>
+                            Others
+                        </label>
+                    </div>
                 </div>
             </div>
             <div class="mb-3">
@@ -58,8 +66,10 @@
                 <input type="date" class="form-control"  v-model="dDate">
             </div>
             <button class="bg--dark text--light btn btn-lg w-100 mb-3" @click="Submit">Continue</button>
-             <div v-show="message != null" :class="message == 'Success' ? 'alert alert-success' : 'alert alert-danger'">
-                <p :class="message == 'Success' ? 'text-success' : 'text-danger'">{{message}}</p>
+            <div v-for="error, index in errors" :key="index">
+                <div v-show="errors.length != 0" class="alert alert-danger">
+                    <p class="text-danger">{{error}}</p>
+                </div>
             </div>
         </div>
     </div>
@@ -89,55 +99,57 @@ export default {
                 {title: 'Youtube music'},
             ],
             dDate: moment().format('YYYY-MM-DD'),
-            message: null,
+            errors: [],
         }
     },
     methods:{
         Submit(){
-            const gift = {
+            if(this.recipient == 'Self'){
+                if (!this.bname || !this.bemail ){
+                    this.errors.push("Your name and email fields cannot be empty")
+                }
+                else if (!this.validEmail(this.bemail)) {
+                    this.errors.push('Valid email required.');
+                }
+            }
+            else{
+                 if (!this.bname || !this.bemail || !this.rname || !this.remail){
+                    this.errors.push("Names and emails fields cannot be empty")
+                }
+                else if (!this.validEmail(this.bemail) || !this.validEmail(this.remail)) {
+                    this.errors.push('Valid emails required.');
+                }
+            }
+            if(this.dDate == moment().format('YYYY-MM-DD'))
+                this.errors.push("Deliveries takes up to 24 hours");
+
+            if(this.provider == 'init')
+                this.errors.push("Select a streaming provider");
+
+            setTimeout(() => {
+                this.errors = [];
+            }, 5000);
+
+            if (!this.errors.length) {
+                const gift = {
                 recipient: this.recipient,
                 r_name: this.rname,
                 r_email: this.remail,
                 b_name: this.bname,
                 b_email: this.bemail,
                 provider: this.provider
-            }
-            this.$store.commit('UpdateGift', gift)
-            let boolval = true;
-            this.$store.commit('OpenModal', boolval)
-
-            
-            /*if(this.recipient == 'Self'){
-                if (this.bname == null || this.bemail == null){
-                    this.message = "Your name and email fields cannot be empty"
                 }
-            }
-            else{
-                 if (this.bname == null || this.bemail == null || this.rname == null || this.remail == null){
-                    this.message = "Names and emails fields cannot be empty"
-                }
-            }*/
 
-            /*if (this.bname == null || this.bemail == null &&  this.recipient == 'Self'){
-                    this.message = "Your name and email fields cannot be empty"
-            }
-                else{
-                        if(this.dDate == moment().format('YYYY-MM-DD'))
-                            this.message = "Deliveries takes up to 24 hours"
-                        else{
-                            if (this.psize > 16 || isNaN(this.psize))
-                                this.message = "Playlist items cannot be more than 16"
-                            else{
-                                this.message = "Success"
-                            }
-                        }
-                    //}
-                }   */
-
-            setTimeout(() => {
-                this.message = null;
-            }, 5000);
+                this.$store.commit('UpdateGift', gift)
+                let boolval = true;
+                this.$store.commit('OpenModal', boolval)
+            }  
         },
+        validEmail: function (email) {
+            var re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+            return re.test(email);
+        },
+
         goBack(){
             this.$store.commit('OpenGift1')
         }
@@ -145,7 +157,7 @@ export default {
     computed:{
         ...mapGetters([
             'checkout'
-        ])
+        ]),
     }
 }
 </script>
@@ -153,7 +165,15 @@ export default {
     .form-control::placeholder {
         color: #c4c4c480;
     }
-    .opac{
-        background-color: rgba(0,0,0,0.4);
+
+    .btn--dark-active {
+        color: #fff;
+        background-color: #2f2e4180;
+        border-color: #2f2e41;
+    }
+    .btn--dark-inactive {
+        color: #2f2e41;
+        background-color: #fff;
+        border-color: #2f2e41;;
     }
 </style>

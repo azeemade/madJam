@@ -1,7 +1,6 @@
 <template>
-    <div>
+    <MobileSidebar />
         <MobileNavbar />
-        <MobileSidebar />
         <div class="mb-3 mx-4 mt-16">
             <div class="mb-6">
                 <div class="mb-3">
@@ -65,7 +64,6 @@
             <div v-show="message != null">
                 <Error :alert_type="'warning'" :message="message" />
             </div>
-        </div>
 
     </div>
 </template>

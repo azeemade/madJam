@@ -1,7 +1,6 @@
 <template>
-    <div>
+    <MobileSidebar />
         <MobileNavbar />
-        <MobileSidebar />
         <div class="mx-4 mt-16">
             <div class="mb-4">
                 <p class="font-semibold text-3xl text--dark mb-3">Join our subscribers list</p>
@@ -21,7 +20,6 @@
                 Join
             </button>
         </div>
-    </div>
 </template>
 <script>
 import controller from '@/assets/js/controller.js'

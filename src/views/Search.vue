@@ -18,7 +18,7 @@
                         <li class="" v-for="recent, index in recents" :key="index">
                             <router-link :to="recent.url" class="justify-content-between d-flex align-items-center text--dark text-decoration-none">
                                 <div class="d-flex ml-4 align-items-center">
-                                    <img :src="recent.image" alt="" class="mr-3" width="56" height="56">
+                                    <div class="playlist-image rounded-lg mr-3" :style="{'background-image': 'url('+recent.image+')'}" :title="recent.title"></div>
                                     <p class="mb-0">{{recent.title}}</p>
                                 </div>
                                 <div class="mr-4">
@@ -35,7 +35,8 @@
                         <li class="" v-for="item, index in playlists" :key="index">
                             <router-link :to="'/playlists/'+item.id" class="justify-content-between d-flex align-items-center text--dark text-decoration-none" @click="AddRecents(item.playlist_image, item.playlist_title, '/playlists/'+item.id)">
                                 <div class="d-flex ml-4 align-items-center">
-                                    <img :src="item.playlist_image" alt="" class="mr-3" width="56" height="56">
+                                    
+                                    <div class="playlist-image rounded-lg mr-3" :style="{'background-image': 'url('+item.playlist_image+')'}" :title="item.playlist_title"></div>
                                     <p class="mb-0">{{item.playlist_title}}</p>
                                 </div>
                                 <div class="mr-4">
@@ -55,7 +56,7 @@
                         <li class="" v-for="item, index in categories" :key="index">
                             <router-link :to="'/categories/'+item.id" class="justify-content-between d-flex align-items-center text--dark text-decoration-none" @click="AddRecents(item.image, item.category_title, '/categories/'+item.id)">
                                 <div class="d-flex ml-4 align-items-center">
-                                    <img :src="item.image" alt="" class="mr-3" width="56" height="56">
+                                    <div class="playlist-image rounded-lg mr-3" :style="{'background-image': 'url('+item.image+')'}" :title="item.category_title"></div>
                                     <p class="mb-0">{{item.category_title}}</p>
                                 </div>
                                 <div>
@@ -144,9 +145,6 @@ a:hover{
 }
 body{
     background-color: #f8fafb;
-}
-img{
-    max-height: 56px;
 }
 hr{
     opacity: .1;
