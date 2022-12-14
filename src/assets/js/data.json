@@ -1,0 +1,208 @@
+[
+	{
+		"tableName": "Weekly Features",
+		"content": {
+			"featureName": "#51 - Thunderbolt",
+			"appleMusic": "https://open.spotify.com/playlist/2KyXWYw2sqtAowLRFlsQ0S?si=cdab3bc314074458",
+			"spotify": "https://open.spotify.com/playlist/2KyXWYw2sqtAowLRFlsQ0S?si=cdab3bc314074458",
+			"topArtists": [
+				"Adele",
+				"Justin Bieber",
+				"Juls",
+				"Drake",
+				"B.o.B",
+				"Wavy the Creator",
+				"Sia",
+				"Fetty Wap"
+			],
+			"content": [
+				{
+					"id": 1,
+					"title": "Ina Iyeza",
+					"artistName": "Zain SA",
+					"description": "--",
+					"appleMusic": "https://music.apple.com/ng/album/ina-iyeza/1526058140?i=1526058148",
+					"spotify": "https://open.spotify.com/track/2VeRkDTAwqGFKrGXQnsWEY?si=93c41509d4ea468d"
+				},
+				{
+					"id": 2,
+					"title": "Oh My God",
+					"artistName": "Adele",
+					"description": "--",
+					"appleMusic": "https://music.apple.com/ng/album/oh-my-god/1590035691?i=1590036031",
+					"spotify": "https://open.spotify.com/track/3Kkjo3cT83cw09VJyrLNwX?si=ad4fd98993c14aca"
+				},
+				{
+					"id": 3,
+					"title": "Memories",
+					"artistName": "347aidan",
+					"description": "--",
+					"appleMusic": "https://music.apple.com/ng/album/memories/1571378156?i=1571378161",
+					"spotify": "https://open.spotify.com/track/27XMmSWSOXJ7eVb40tH93T?si=b6a238213df745e4"
+				},
+				{
+					"id": 4,
+					"title": "Bang my head (ft. Sia & Fetty Wap)",
+					"artistName": "David Guetta",
+					"description": "--",
+					"appleMusic": "https://music.apple.com/ng/album/bang-my-head-feat-sia-fetty-wap/1052322497?i=1052323318",
+					"spotify": "https://open.spotify.com/track/53Y0kdCa1CZ9gRqEuknfwy?si=09454473c4e44f38"
+				},
+				{
+					"id": 5,
+					"title": "Ghost",
+					"artistName": "Justin Bieber",
+					"description": "--",
+					"appleMusic": "https://music.apple.com/ng/album/ghost/1556169567?i=1556170100",
+					"spotify": "https://open.spotify.com/track/6I3mqTwhRpn34SLVafSH7G?si=6d552dc0763f4406"
+				},
+				{
+					"id": 6,
+					"title": "Ray Bands",
+					"artistName": "B.o.B",
+					"description": "--",
+					"appleMusic": "https://music.apple.com/ng/album/ray-bands/518748242?i=518748317",
+					"spotify": "https://open.spotify.com/track/2g6zbVqZvnc1dk6cYUhr5g?si=b060d8ff95c74235"
+				},
+				{
+					"id": 7,
+					"title": "Airplanes Pt. II ft. Eminem & Hayley Williams of Paramore",
+					"artistName": "B.o.B",
+					"description": "--",
+					"appleMusic": "https://music.apple.com/ng/album/airplanes-pt-2-feat-eminem-hayley-williams/367433075?i=367433280",
+					"spotify": "https://open.spotify.com/track/2bnDTGikdoO8CwzlAPyBHR?si=17e13dec56884a13"
+				},
+				{
+					"id": 8,
+					"title": "Harmonies",
+					"artistName": "Wavy The Creator, WurlD",
+					"description": "--",
+					"appleMusic": "https://music.apple.com/ng/album/harmonies-feat-wurld/1578313112?i=1578313447",
+					"spotify": "https://open.spotify.com/track/0LC0ATPU0YgeTbz0C1vDhf?si=6674fc3cdbb346b9"
+				},
+				{
+					"id": 9,
+					"title": "Oshey",
+					"artistName": "Julz, DJ Tunez Moelogo, Siza",
+					"description": "--",
+					"appleMusic": "https://music.apple.com/ng/album/oshey-feat-moelogo-siza-dj-tunez/1325820786?i=1325821371",
+					"spotify": "https://open.spotify.com/track/7086QbyiN4ITmlngO7XwgA?si=a196ada36edf4ece"
+				},
+				{
+					"id": 10,
+					"title": "Knife Talk",
+					"artistName": "Drake, 21 Savage, Project Pat",
+					"description": "--",
+					"appleMusic": "https://music.apple.com/ng/album/knife-talk-feat-21-savage-project-pat/1584281467?i=1584281787",
+					"spotify": "https://open.spotify.com/track/2BcMwX1MPV6ZHP4tUT9uq6?si=755cd31d1f034944"
+				}
+			]
+		}
+	},
+	{
+		"tableName": "Monthly playlists",
+		"content": [
+			{
+				"id": 12,
+				"cover": "",
+				"playlistTitle": "#12 - December Special",
+				"appleMusic": "https://music.apple.com/ng/playlist/november-special/pl.u-MDAWWgDTAR5PDmy",
+				"spotify": "https://open.spotify.com/playlist/2KyXWYw2sqtAowLRFlsQ0S?si=3eca6a51523942af",
+				"topArtists": [
+					"Adele",
+					"Justin Bieber",
+					"Juls",
+					"Drake",
+					"Johnny Cash",
+					"Wizkid",
+					"Sia",
+					"Kanye West",
+					"Kabza De Small",
+					"Coldplay",
+					"Tame Impala"
+				],
+				"description": "--",
+				"size": 55
+			},
+			{
+				"id": 11,
+				"cover": "",
+				"title": "#11 - November Special",
+				"appleMusic": "https://music.apple.com/ng/playlist/november-special/pl.u-MDAWWgDTAR5PDmy",
+				"spotify": "https://open.spotify.com/playlist/2KyXWYw2sqtAowLRFlsQ0S?si=3eca6a51523942af",
+				"topArtists": [
+					"Adele",
+					"Justin Bieber",
+					"Juls",
+					"Drake",
+					"Johnny Cash",
+					"Wizkid",
+					"Sia",
+					"Kanye West",
+					"Kabza De Small",
+					"Coldplay",
+					"Tame Impala"
+				],
+				"description": "--",
+				"size": 55
+			},
+			{
+				"id": 10,
+				"cover": "",
+				"title": "#10 - October Special",
+				"appleMusic": "https://music.apple.com/ng/playlist/november-special/pl.u-MDAWWgDTAR5PDmy",
+				"spotify": "https://open.spotify.com/playlist/2KyXWYw2sqtAowLRFlsQ0S?si=3eca6a51523942af",
+				"topArtists": [
+					"Adele",
+					"Justin Bieber",
+					"Juls",
+					"Drake",
+					"Johnny Cash",
+					"Wizkid",
+					"Sia",
+					"Kanye West",
+					"Kabza De Small",
+					"Coldplay",
+					"Tame Impala"
+				],
+				"description": "--",
+				"size": 55
+			}
+		]
+	},
+	{
+		"tableName": "Space schedules",
+		"content": {
+			"upcoming": {
+				"title": "Boy Alone Space Listening",
+				"time": "11 Dec, 09:00 PM",
+				"note": "Enjoy the album of the year from nigeria's Omah lay"
+			},
+			"recent": {
+				"title": "Playboy Album Listening",
+				"time": "30th Oct, 07: PM",
+				"note": "Come join us as we listen to one of the foremost youngsters in the afrobeat space."
+			}
+		}
+	},
+	{
+		"tableName": "Categories",
+		"content": [
+			{
+				"title": "monthly",
+                "url": "playlists/monthly",
+				"image_url": "monthly.png"
+			},
+			{
+				"title": "alternative",
+                "url": "playlists/alternative",
+				"image_url": "alternative.png"
+			},
+			{
+				"title": "weekly",
+                "url": "features",
+				"image_url": "weekly-features.png"
+			}
+		]
+	}
+]
