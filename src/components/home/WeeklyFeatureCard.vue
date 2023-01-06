@@ -13,7 +13,7 @@ import { onMounted, reactive, ref  } from 'vue';
            state.img =  data.thumbnail_url;
         });
     }
-    
+
     onMounted(() => {
         getImage()
     })
@@ -25,9 +25,9 @@ import { onMounted, reactive, ref  } from 'vue';
             class="">
             <div 
                 class="flex space-x-2">
-                <div class="song-cover">
+                <div>
                     <img 
-                        class="song-cover"
+                        class="rounded"
                         :src="state.img" 
                         alt="cover image">
                 </div>

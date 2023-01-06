@@ -105,7 +105,7 @@
 			{
 				"id": 12,
 				"cover": "",
-				"playlistTitle": "#12 - December Special",
+				"title": "#12 - December Special",
 				"appleMusic": "https://music.apple.com/ng/playlist/november-special/pl.u-MDAWWgDTAR5PDmy",
 				"spotify": "https://open.spotify.com/playlist/2KyXWYw2sqtAowLRFlsQ0S?si=3eca6a51523942af",
 				"topArtists": [
@@ -180,7 +180,7 @@
 			},
 			"recent": {
 				"title": "Playboy Album Listening",
-				"time": "30th Oct, 07: PM",
+				"time": "30th Oct, 07:30 PM",
 				"note": "Come join us as we listen to one of the foremost youngsters in the afrobeat space."
 			}
 		}
@@ -199,8 +199,8 @@
 				"image_url": "alternative.png"
 			},
 			{
-				"title": "weekly",
-                "url": "features",
+				"title": "features",
+                "url": "playlists/features",
 				"image_url": "weekly-features.png"
 			}
 		]
