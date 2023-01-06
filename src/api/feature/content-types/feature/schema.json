@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "features",
+  "info": {
+    "singularName": "feature",
+    "pluralName": "features",
+    "displayName": "feature"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "featureName": {
+      "type": "string"
+    },
+    "appleMusic": {
+      "type": "string"
+    },
+    "spotify": {
+      "type": "string"
+    },
+    "topArtists": {
+      "type": "string"
+    },
+    "contents": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::feature-content.feature-content",
+      "mappedBy": "feature"
+    }
+  }
+}

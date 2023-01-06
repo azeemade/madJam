@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "playlists",
+  "info": {
+    "singularName": "playlist",
+    "pluralName": "playlists",
+    "displayName": "playlist",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "topArtists": {
+      "type": "string"
+    },
+    "appleMusic": {
+      "type": "string"
+    },
+    "spotify": {
+      "type": "string"
+    },
+    "label": {
+      "type": "enumeration",
+      "enum": [
+        "monthly",
+        "alternative"
+      ]
+    }
+  }
+}
