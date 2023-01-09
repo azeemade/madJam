@@ -1,0 +1,13 @@
+"""MAIL_SERVER='smtp.gmail.com'
+MAIL_PORT = 465
+MAIL_USERNAME = 'madjamng@gmail.com'
+MAIL_PASSWORD = 'xlqrrvqvyqzmpaql'
+MAIL_USE_TLS = False
+MAIL_USE_SSL = True"""
+MAIL_SERVER = 'smtp.mailtrap.io'
+MAIL_PORT = 2525
+MAIL_USERNAME = 'a0ed901c3f1c5e'
+MAIL_PASSWORD = 'b61b8f2eb2f82d'
+MAIL_USE_TLS = True
+MAIL_USE_SSL = False
+URL_TO_SCRAP = 'https://music.apple.com/ng/playlist/jan-jan/pl.u-4JomKWmtJjgKkWB'
